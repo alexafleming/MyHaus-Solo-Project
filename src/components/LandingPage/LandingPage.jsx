@@ -3,9 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
+import { Container, Typography, Grid } from '@mui/material';
 
 function LandingPage() {
   const [heading, setHeading] = useState('Welcome');
@@ -16,8 +14,9 @@ function LandingPage() {
   };
 
   return (
-    <div className="container">
-      <Container maxWidth="sm" className="landing-page-banner">
+    <Container>
+        <Grid container maxWidth="sm" className="landing-page-banner">
+          <Grid item xs={4}>
             <Typography
               component="h1"
               variant="h2"
@@ -25,16 +24,17 @@ function LandingPage() {
               color="text.primary"
               gutterBottom
             >
-              MYHAUS
+              MY
+              HAUS
             </Typography>
+          </Grid>
+          <Grid item xs={8}>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+              the all-in-one home management app designed to assist you in organizing, documenting, and improving your home projects and maintenance tasks.
             </Typography>
-          </Container>
-  
-    </div>
+          </Grid>
+        </Grid>
+        </Container>
   );
 }
 
