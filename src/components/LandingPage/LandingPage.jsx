@@ -17,19 +17,10 @@ function LandingPage() {
     <Container>
         <Grid container maxWidth="sm" className="landing-page-banner">
           <Grid item xs={4}>
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              MY
-              HAUS
-            </Typography>
+          <img src="images/big-logo.png"/>
           </Grid>
           <Grid item xs={8}>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h6" align="center" className="landing-page-desc">
               the all-in-one home management app designed to assist you in organizing, documenting, and improving your home projects and maintenance tasks.
             </Typography>
           </Grid>

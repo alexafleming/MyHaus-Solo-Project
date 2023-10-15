@@ -2,9 +2,14 @@
   background-color: #f6f0e8;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
   margin: auto;
   margin-top: 55px;
+}
+
+.landing-page-desc {
+  padding-left: 10px;
+  padding-top: 20px;
 }
 
