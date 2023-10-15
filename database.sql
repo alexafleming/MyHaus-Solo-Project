@@ -42,3 +42,24 @@ CREATE TABLE "decor_form" (
     "addtional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
+
+
+-- appliances_electronics_form table 
+CREATE TABLE "appliances_electronics_form" (
+    "id" SERIAL PRIMARY KEY,
+    "item" VARCHAR (100) NOT NULL,
+    "brand_name" VARCHAR (150) NOT NULL,
+    "model_number" VARCHAR NULL,
+    "warrenty_info" VARCHAR NULL,
+    "addtional_comments" VARCHAR (1000) NULL,
+    "room_id" INTEGER REFERENCES rooms
+);
+
+-- miscellaneous_form table
+CREATE TABLE "miscellaneous_form" (
+    "id" SERIAL PRIMARY KEY,
+    "item" VARCHAR (100) NOT NULL,
+    "brand_name" VARCHAR (150) NOT NULL,
+    "addtional_comments" VARCHAR (1000) NULL,
+    "room_id" INTEGER REFERENCES rooms
+);
