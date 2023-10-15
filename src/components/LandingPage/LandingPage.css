@@ -5,6 +5,7 @@
   padding-left: 35px;
   padding-right: 35px;
   margin: auto;
+  max-width: 650px;
   margin-top: 55px;
 }
 
@@ -13,3 +14,7 @@
   padding-top: 20px;
 }
 
+.landing-page-images{
+  padding-top: 75px;
+  margin: auto;
+}
