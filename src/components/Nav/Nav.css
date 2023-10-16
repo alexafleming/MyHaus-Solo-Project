@@ -7,35 +7,37 @@
   margin: 0 0 30px;
   background-color: #f6f0e8;
   overflow: hidden;
+
+
+   > .nav a {
+    text-decoration: none;
+  }
+  
+  
+  .navLink {
+    display: inline-block;
+    color: #000000;
+    background-color: #f6f0e8;
+    text-align: center;
+    padding: 24px 10px;
+    text-decoration: none;
+    font-size: 15px;
+  
+    /* these last two make the logout button in
+    the nav bar look like another link */
+    border: none;
+    cursor: pointer;
+    outline: 0;
+  }
+  
+  .navLink:hover {
+    background-color: #e3dacd;
+  }
+  
+  .nav-logo {
+    max-width: 60px;
+    height: auto; 
+    padding-left: 10px;
+  }
 }
 
-.nav a {
-  text-decoration: none;
-}
-
-
-.navLink {
-  display: inline-block;
-  color: #000000;
-  background-color: #f6f0e8;
-  text-align: center;
-  padding: 24px 10px;
-  text-decoration: none;
-  font-size: 15px;
-
-  /* these last two make the logout button in
-  the nav bar look like another link */
-  border: none;
-  cursor: pointer;
-  outline: 0;
-}
-
-.navLink:hover {
-  background-color: #e3dacd;
-}
-
-.nav-logo {
-  max-width: 60px;
-  height: auto; 
-  padding-left: 10px;
-}

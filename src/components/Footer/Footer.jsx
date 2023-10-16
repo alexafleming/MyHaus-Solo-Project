@@ -11,16 +11,23 @@ function Footer() {
   return(
   <footer class="py-3 my-4 footer-bar">
     <ul class="nav justify-content-center pb-1 mb-1">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <Link className="nav-link px-2 text-body-secondary" to="/about">
-          About
+    <Link className="footer-link px-2 text-white" to="/login">
+      LOGIN
         </Link>
-    </ul>
-    <hr className="my-1" />
+        <Link className="footer-link px-2 text-white" to="/about">
+          ABOUT
+        </Link>
+        <Link className="footer-link px-2 text-white" to="/about">
+          ROOM PROFILES
+        </Link>
+      <Link className="footer-link px-2 text-white" to="/about">
+          CREATE ROOM
+        </Link>
+        </ul>
+        <hr className="my-1" />
     <p className="text-center">&copy; Prime Digital Academy</p>
+    
+
    
   </footer>
   )
