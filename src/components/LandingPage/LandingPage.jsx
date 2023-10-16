@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
 
-// CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
 
 function LandingPage() {
   const [heading, setHeading] = useState('Welcome');
@@ -14,52 +12,49 @@ function LandingPage() {
   };
 
   return (
-    <div className="container">
-      <h2>{heading}</h2>
-
-      <div className="grid">
-        <div className="grid-col grid-col_8">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id felis metus. Vestibulum et pulvinar tortor. Morbi pharetra lacus
-            ut ex molestie blandit. Etiam et turpis sit amet risus mollis
-            interdum. Suspendisse et justo vitae metus bibendum fringilla sed
-            sed justo. Aliquam sollicitudin dapibus lectus, vitae consequat odio
-            elementum eget. Praesent efficitur eros vitae nunc interdum, eu
-            interdum justo facilisis. Sed pulvinar nulla ac dignissim efficitur.
-            Quisque eget eros metus. Vestibulum bibendum fringilla nibh a
-            luctus. Duis a sapien metus.
-          </p>
-
-          <p>
-            Praesent consectetur orci dui, id elementum eros facilisis id. Sed
-            id dolor in augue porttitor faucibus eget sit amet ante. Nunc
-            consectetur placerat pharetra. Aenean gravida ex ut erat commodo, ut
-            finibus metus facilisis. Nullam eget lectus non urna rhoncus
-            accumsan quis id massa. Curabitur sit amet dolor nisl. Proin
-            euismod, augue at condimentum rhoncus, massa lorem semper lacus, sed
-            lobortis augue mi vel felis. Duis ultrices sapien at est convallis
-            congue.
-          </p>
-
-          <p>
-            Fusce porta diam ac tortor elementum, ut imperdiet metus volutpat.
-            Suspendisse posuere dapibus maximus. Aliquam vitae felis libero. In
-            vehicula sapien at semper ultrices. Vivamus sed feugiat libero. Sed
-            sagittis neque id diam euismod, ut egestas felis ultricies. Nullam
-            non fermentum mauris. Sed in enim ac turpis faucibus pretium in sit
-            amet nisi.
+    <div className='container landing-page-container'>
+      <div className='row landing-page-banner mx-auto'>
+        <div className='col-4'>
+          <img src="images/big-logo.png" alt="Logo" />
+        </div>
+        <div className='col-8'>
+          <p className="h5 text-center landing-page-desc mx-auto">
+            the all-in-one home management app designed to assist you in organizing, documenting, and improving your home projects and maintenance tasks.
           </p>
         </div>
-        <div className="grid-col grid-col_4">
-          <RegisterForm />
-
-          <center>
-            <h4>Already a Member?</h4>
-            <button className="btn btn_sizeSm" onClick={onLogin}>
-              Login
-            </button>
-          </center>
+      </div>
+      <div className="row landing-page-images">
+        <div className="col">
+          <div className="rounded-image-container">
+            <img className="rounded-image" src="images/decor-image.jpg" alt="Decor" />
+            <div className="image-overlay">
+              <p className="overlay-text">decor</p>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="rounded-image-container">
+            <img className="rounded-image" src="images/documents-image.jpg" alt="Documents" />
+            <div className="image-overlay">
+              <p className="overlay-text">documents</p>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="rounded-image-container">
+            <img className="rounded-image" src="images/home-projects-image.jpg" alt="Home Projects" />
+            <div className="image-overlay">
+              <p className="overlay-text">home projects</p>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="rounded-image-container">
+            <img className="rounded-image" src="images/appliances-image.jpg" alt="Appliances" />
+            <div className="image-overlay">
+              <p className="overlay-text">appliances</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
