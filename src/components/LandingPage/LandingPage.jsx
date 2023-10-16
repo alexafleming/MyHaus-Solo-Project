@@ -18,7 +18,7 @@ function LandingPage() {
           <img src="images/big-logo.png" alt="Logo" />
         </div>
         <div className='col-8'>
-          <p className="h6 text-center landing-page-desc mx-auto">
+          <p className="h5 text-center landing-page-desc mx-auto">
             the all-in-one home management app designed to assist you in organizing, documenting, and improving your home projects and maintenance tasks.
           </p>
         </div>

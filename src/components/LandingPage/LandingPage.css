@@ -1,5 +1,5 @@
 .landing-page-container{
-  margin-top: 40px;
+  margin-top: 45px;
 }
 
 .landing-page-banner{
@@ -13,7 +13,7 @@
 }
 
 .landing-page-desc {
-  padding-left: 10px;
+  padding-left: 30px;
   padding-top: 20px;
 }
 
@@ -38,9 +38,8 @@
   position: absolute;
     top: 50%;
     left: 50%;
-  
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 180px;
+    text-align: center;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     background-color: rgba(246,240,232, 0.75);
