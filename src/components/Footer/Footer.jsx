@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -7,7 +8,29 @@ import './Footer.css';
 // or even care what the redux state is, so it doesn't need 'connect()'
 
 function Footer() {
-  return <footer>&copy; Prime Digital Academy</footer>;
+  return(
+  <footer class="py-3 my-4 footer-bar">
+    <ul class="nav justify-content-center pb-1 mb-1">
+    <Link className="footer-link px-2 text-white" to="/login">
+      LOGIN
+        </Link>
+        <Link className="footer-link px-2 text-white" to="/about">
+          ABOUT
+        </Link>
+        <Link className="footer-link px-2 text-white" to="/about">
+          ROOM PROFILES
+        </Link>
+      <Link className="footer-link px-2 text-white" to="/about">
+          CREATE ROOM
+        </Link>
+        </ul>
+        <hr className="my-1" />
+    <p className="text-center">&copy; Prime Digital Academy</p>
+    
+
+   
+  </footer>
+  )
 }
 
 
