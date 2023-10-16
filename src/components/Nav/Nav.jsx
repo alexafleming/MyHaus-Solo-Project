@@ -9,15 +9,15 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
-        <h2 className="nav-title">MYHAUS</h2>
-      </Link>
+       <Link to="/home">
+        <img src="images/big-logo.png" alt="Logo" className="nav-logo" />
+    </Link>
       <div>
         {/* If no user is logged in, show these links */}
         {!user.id && (
           // If there's no user, show login/registration links
           <Link className="navLink" to="/login">
-            LOGIN OR JOIN
+            SIGN IN OR JOIN
           </Link>
         )}
 
