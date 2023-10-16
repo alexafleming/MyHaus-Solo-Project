@@ -12,7 +12,7 @@ function AboutPage() {
       {/* Logo and Description Section */}
       {/* ... (your existing logo and description section) */}
       <div className='row'>
-        
+
         <div className='col-6'>
           <div className="row">
             <div className="col-md-6">
@@ -52,7 +52,15 @@ function AboutPage() {
           </div>
         </div>
 
-        <div className='col-6'></div>
+        <div className="col-6">
+          <h2 className="about-title">ABOUT</h2>
+          <p className="about-text">
+            Tired of keeping track of home improvement projects, room details, and warranties
+            in scattered notes and documents? Welcome to MyHaus, your all-in-one home management
+            application. MyHaus is designed to help you effortlessly organize, document, and enhance
+            your home projects. With MyHaus, your home is not just a place; it's a well-managed sanctuary.
+          </p>
+        </div>
       </div>
     </div>
   );
