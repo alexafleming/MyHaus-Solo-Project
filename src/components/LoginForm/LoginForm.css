@@ -1,0 +1,18 @@
+.login-form{
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    padding: 25px;
+    margin: 0 auto 20px;
+    background-color: #f6f0e8;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+    margin-top: 50px;
+    padding-top: 80px;
+}
+
+.username-title, .password-title{
+    text-align: center;
+    font-weight: 600;
+}
