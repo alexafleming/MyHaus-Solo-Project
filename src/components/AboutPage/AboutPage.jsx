@@ -35,7 +35,7 @@ function AboutPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="rounded-image-container">
-                <img className="rounded-image" src="images/home-projects-image.jpg" alt="Home Projects" />
+                <img className="rounded-image home-projects-image-top" src="images/home-projects-image.jpg" alt="Home Projects" />
                 <div className="image-overlay">
                   <p className="overlay-text">home projects</p>
                 </div>
