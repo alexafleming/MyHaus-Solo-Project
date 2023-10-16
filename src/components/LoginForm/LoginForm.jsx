@@ -36,6 +36,7 @@ function LoginForm() {
       <div>
         <label htmlFor="username">
           <input type="text"
+            className="username-input mx-auto"
             name="username"
             required
             value={username}
@@ -48,6 +49,7 @@ function LoginForm() {
       <p className="password-title">PASSWORD</p>
         <label htmlFor="password">
           <input
+          className="password-input"
             type="password"
             name="password"
             required
