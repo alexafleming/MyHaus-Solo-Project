@@ -41,7 +41,7 @@ function LoginForm() {
             required
             autoComplete='off'
             value={username}
-            placeholder='username'
+            placeholder='*username'
             onChange={(event) => setUsername(event.target.value)}
           />
         </label>
@@ -56,7 +56,7 @@ function LoginForm() {
             required
             autoComplete='off'
             value={password}
-            placeholder='password'
+            placeholder='*password'
             onChange={(event) => setPassword(event.target.value)}
           />
         </label>

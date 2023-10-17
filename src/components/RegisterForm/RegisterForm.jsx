@@ -7,6 +7,7 @@ function RegisterForm() {
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
 
@@ -25,72 +26,83 @@ function RegisterForm() {
   }; // end registerUser
 
   return (
-<form className="formPanel join-form" onSubmit={registerUser}>
+<form className="join-form" onSubmit={registerUser}>
   {errors.registrationMessage && (
     <h3 className="alert" role="alert">
       {errors.registrationMessage}
     </h3>
   )}
   <div className="mb-3">
-    <label htmlFor="firstName" className="username-title-join">
-      First Name:
+    <label htmlFor="firstName" className="join-form-style">
+      FIRST NAME
       <input
         type="text"
-        className="form-control username-input mx-auto"
+        className="form-control input-join-form mx-auto"
         name="firstName"
         required
         autoComplete="off"
         value={firstName}
-        placeholder="First Name"
+        placeholder="*first name"
         onChange={(event) => setFirstName(event.target.value)}
       />
     </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="lastName" className="username-title-join">
-      Last Name:
+    <label htmlFor="lastName" className="join-form-style">
+     LAST NAME
       <input
         type="text"
-        className="form-control username-input mx-auto"
+        className="form-control input-join-form mx-auto"
         name="lastName"
         required
         autoComplete="off"
         value={lastName}
-        placeholder="Last Name"
+        placeholder="*last Name"
         onChange={(event) => setLastName(event.target.value)}
       />
     </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="username" className="username-title-join">
-      Username:
+    <label htmlFor="username" className="join-form-style">
+      USERNAME
       <input
         type="text"
-        className="form-control username-input mx-auto"
+        className="form-control input-join-form mx-auto"
         name="username"
         required
         autoComplete="off"
         value={username}
-        placeholder="Username"
+        placeholder="*username"
         onChange={(event) => setUsername(event.target.value)}
       />
     </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="password-title-join">
-      Password:
+    <label htmlFor="password" className="join-form-style">
+      CREATE PASSWORD
       <input
         type="password"
-        className="form-control password-input mx-auto"
+        className="form-control input-join-form mx-auto"
         name="password"
         required
         autoComplete="off"
         value={password}
-        placeholder="Password"
+        placeholder="*password"
         onChange={(event) => setPassword(event.target.value)}
       />
     </label>
   </div>
+  <center>
+        <button
+          type="button"
+          className="btn reg-join-btn"
+          onClick={() => {
+            history.push('/login');
+          }}
+        >
+          JOIN
+        </button>
+      </center>
 </form>
   );
 }
