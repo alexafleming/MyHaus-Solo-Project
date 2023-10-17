@@ -1,0 +1,49 @@
+.join-form {
+    box-sizing: border-box;
+    width: 300px;
+    height: 450px;
+    max-width: 100%;
+    padding: 25px;
+    margin: 0 auto 0px;
+    background-color: #f6f0e8;
+    border-radius: 3px;
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+    
+    .btn{
+        margin-top: 25px;
+    }
+}
+
+.username-title-join {
+    font-weight: 600;
+}
+
+.password-title-join {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.username-input,
+.password-input {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.join_btn_styled{
+    border: none;
+    width: 300px;
+    height: 75px;
+    background-color: #b5b0a0;
+    text-align: center; 
+    font-weight: bold;
+}
