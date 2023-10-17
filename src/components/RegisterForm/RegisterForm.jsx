@@ -37,7 +37,7 @@ function RegisterForm() {
       FIRST NAME
       <input
         type="text"
-        className="form-control input-join-form mx-auto"
+        className="input-join-form mx-auto"
         name="firstName"
         required
         autoComplete="off"
@@ -52,7 +52,7 @@ function RegisterForm() {
      LAST NAME
       <input
         type="text"
-        className="form-control input-join-form mx-auto"
+        className="input-join-form mx-auto"
         name="lastName"
         required
         autoComplete="off"
@@ -67,7 +67,7 @@ function RegisterForm() {
       USERNAME
       <input
         type="text"
-        className="form-control input-join-form mx-auto"
+        className="input-join-form mx-auto"
         name="username"
         required
         autoComplete="off"
@@ -82,7 +82,7 @@ function RegisterForm() {
       CREATE PASSWORD
       <input
         type="password"
-        className="form-control input-join-form mx-auto"
+        className="input-join-form mx-auto"
         name="password"
         required
         autoComplete="off"
@@ -95,7 +95,7 @@ function RegisterForm() {
   <center>
         <button
           type="button"
-          className="btn reg-join-btn"
+          className="reg-join-btn"
           onClick={() => {
             history.push('/login');
           }}
