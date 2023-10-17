@@ -39,6 +39,7 @@ function LoginForm() {
             className="username-input mx-auto"
             name="username"
             required
+            autoComplete='off'
             value={username}
             placeholder='username'
             onChange={(event) => setUsername(event.target.value)}
@@ -53,6 +54,7 @@ function LoginForm() {
             type="password"
             name="password"
             required
+            autoComplete='off'
             value={password}
             placeholder='password'
             onChange={(event) => setPassword(event.target.value)}
@@ -60,7 +62,7 @@ function LoginForm() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Log In" />
+        <input className="btn" type="submit" name="submit" value="LOGIN" />
       </div>
     </form>
   );
