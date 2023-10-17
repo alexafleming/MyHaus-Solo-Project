@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import './RegisterForm.css'
 
 function RegisterForm() {
@@ -11,6 +12,8 @@ function RegisterForm() {
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
 
+  const history = useHistory();
+  
   const registerUser = (event) => {
     event.preventDefault();
 
@@ -33,9 +36,10 @@ function RegisterForm() {
     </h3>
   )}
   <div className="mb-3">
-    <label htmlFor="firstName" className="join-form-style">
+    <label htmlFor="firstName" className="join-title-style">
       FIRST NAME
-      <input
+    </label>
+    <input
         type="text"
         className="input-join-form mx-auto"
         name="firstName"
@@ -45,12 +49,12 @@ function RegisterForm() {
         placeholder="*first name"
         onChange={(event) => setFirstName(event.target.value)}
       />
-    </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="lastName" className="join-form-style">
+    <label htmlFor="lastName" className="join-title-style">
      LAST NAME
-      <input
+    </label>
+    <input
         type="text"
         className="input-join-form mx-auto"
         name="lastName"
@@ -60,12 +64,12 @@ function RegisterForm() {
         placeholder="*last Name"
         onChange={(event) => setLastName(event.target.value)}
       />
-    </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="username" className="join-form-style">
+    <label htmlFor="username" className="join-title-style">
       USERNAME
-      <input
+    </label>
+    <input
         type="text"
         className="input-join-form mx-auto"
         name="username"
@@ -75,12 +79,12 @@ function RegisterForm() {
         placeholder="*username"
         onChange={(event) => setUsername(event.target.value)}
       />
-    </label>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="join-form-style">
+    <label htmlFor="password" className="join-title-style">
       CREATE PASSWORD
-      <input
+    </label>
+    <input
         type="password"
         className="input-join-form mx-auto"
         name="password"
@@ -90,7 +94,6 @@ function RegisterForm() {
         placeholder="*password"
         onChange={(event) => setPassword(event.target.value)}
       />
-    </label>
   </div>
   <center>
         <button
