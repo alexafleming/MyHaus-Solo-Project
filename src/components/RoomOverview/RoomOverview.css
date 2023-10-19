@@ -1,0 +1,21 @@
+
+.notes-title{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: large;
+}
+.notepad{
+    background-color: #f6f0e8;
+    border: none;
+    padding-left: 160px;
+    padding-bottom: 50px;
+}
+
+.image-overview{
+    display: block;
+    width: 100%;
+    height: 400px;
+    position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}

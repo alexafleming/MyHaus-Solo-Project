@@ -81,7 +81,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/room-profiles" />
               :
               // Otherwise, show the login page
               <LoginPage />
@@ -95,7 +95,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/room-profiles" />
               :
               // Otherwise, show the registration page
               <RegisterPage />
@@ -106,54 +106,28 @@ function App() {
             exact
             path="/home"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
               <LandingPage />
-            }
           </Route>
-          <Route
+          <ProtectedRoute
             exact
             path="/room-profiles"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
               <RoomProfiles />
-            }
-          </Route>
-          <Route
+          </ProtectedRoute>
+          <ProtectedRoute
             exact
             path="/create-room"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
+              
               <CreateRoom />
-            }
-          </Route>
-          <Route
+          </ProtectedRoute>
+          <ProtectedRoute
             exact
             path="/room-overview"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
+
               <RoomOverview />
-            }
-          </Route>
+          </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>

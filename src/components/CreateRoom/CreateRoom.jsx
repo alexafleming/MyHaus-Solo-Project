@@ -10,7 +10,7 @@ function createRoom() {
     return (
         <div>
         <div classname="create-room" >
-            <h2>COMING SOON</h2>
+            <h2>CREATE A ROOM COMING SOON</h2>
         </div>
         </div>
     );
