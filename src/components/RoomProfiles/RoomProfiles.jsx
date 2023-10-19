@@ -6,7 +6,7 @@ function roomProfiles() {
     const history = useHistory();
 
     const handlePlusButtonClick = () => {
-        history.push('/your-new-page'); // Replace '/your-new-page' with the desired path
+        history.push('/create-room');
       };
 
 
