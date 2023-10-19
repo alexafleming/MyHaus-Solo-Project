@@ -20,7 +20,7 @@ function Footer() {
         <Link className="footer-link px-2 text-white" to="/room-profiles">
           ROOM PROFILES
         </Link>
-      <Link className="footer-link px-2 text-white" to="/about">
+      <Link className="footer-link px-2 text-white" to="/create-room">
           CREATE ROOM
         </Link>
         </ul>

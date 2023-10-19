@@ -5,10 +5,13 @@ import './RoomProfiles.css'
 function roomProfiles() {
     const history = useHistory();
 
-    const handlePlusButtonClick = () => {
+    const createNewRoom = () => {
         history.push('/create-room');
       };
 
+      const roomOverviewPage = () => {
+        history.push('/room-overview');
+      };
 
     return (
         <div className="room-profile-images">
@@ -16,7 +19,7 @@ function roomProfiles() {
                 <div className="col-3">
                     <div className="rounded-image-container">
                         <img className="rounded-image" src="images/decor-image.jpg" alt="Decor" />
-                        <div className="image-overlay-add"  onClick={handlePlusButtonClick}>
+                        <div className="image-overlay-add"  onClick={createNewRoom}>
                             <p className="overlay-text-add">+</p>
                         </div>
                     </div>
@@ -24,7 +27,7 @@ function roomProfiles() {
                 <div className="col-3">
                     <div className="rounded-image-container">
                         <img className="rounded-image" src="images/bathroom-image.jpg" alt="Documents" />
-                        <div className="image-overlay">
+                        <div className="image-overlay" onClick={roomOverviewPage}>
                             <p className="overlay-text">bathroom</p>
                         </div>
                     </div>
@@ -32,7 +35,7 @@ function roomProfiles() {
                 <div className="col-3">
                     <div className="rounded-image-container">
                         <img className="rounded-image" src="images/laundry-room.jpg" alt="Home Projects" />
-                        <div className="image-overlay">
+                        <div className="image-overlay" onClick={roomOverviewPage}>
                             <p className="overlay-text">laundry</p>
                         </div>
                     </div>
@@ -40,7 +43,7 @@ function roomProfiles() {
                 <div className="col-3">
                     <div className="rounded-image-container">
                         <img className="rounded-image" src="images/appliances-image.jpg" alt="Appliances" />
-                        <div className="image-overlay">
+                        <div className="image-overlay" onClick={roomOverviewPage}>
                             <p className="overlay-text">kitchen</p>
                         </div>
                     </div>
