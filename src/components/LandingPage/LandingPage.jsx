@@ -4,7 +4,6 @@ import './LandingPage.css';
 
 
 function LandingPage() {
-  const [heading, setHeading] = useState('Welcome');
   const history = useHistory();
 
   const onLogin = (event) => {
