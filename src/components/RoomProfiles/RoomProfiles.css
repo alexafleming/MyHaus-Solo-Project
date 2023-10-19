@@ -1,0 +1,25 @@
+.room-profile-images{
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+
+}
+
+.image-overlay-add{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 240, 232);    
+}
+
+.overlay-text-add{
+    text-align: center;
+    padding-top: 15px;
+    font-size: xx-large;
+    font-weight: bold;
+}

@@ -19,6 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import RoomProfiles from '../RoomProfiles/RoomProfiles';
 
 // import bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -110,6 +111,19 @@ function App() {
               :
               // Otherwise, show the Landing page
               <LandingPage />
+            }
+          </Route>
+          <Route
+            exact
+            path="/room-profiles"
+          >
+            {user.id ?
+              // If the user is already logged in, 
+              // redirect them to the /user page
+              <Redirect to="/user" />
+              :
+              // Otherwise, show the Landing page
+              <RoomProfiles />
             }
           </Route>
 
