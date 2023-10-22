@@ -20,7 +20,24 @@
     border-radius: 10px;
 }
 
+.accordion-color{
+background-color: #b5b0a0 !important;
+font-weight:800;
+}
 
 .right-align-btn{
     text-align: right;
+}
+
+.accordion-item{
+    padding-top: 3px;
+}
+
+.accordion-item-padding{
+    padding-top: 4px;
+}
+
+.accordion-item:focus{
+    box-shadow: none;
+    color: black !important;
 }
