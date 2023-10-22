@@ -22,6 +22,11 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import RoomProfiles from '../RoomProfiles/RoomProfiles';
 import CreateRoom from '../CreateRoom/CreateRoom';
 import RoomOverview from '../RoomOverview/RoomOverview';
+import AppliancesElectronicsForm from '../Forms/ApplliancesElectronicsForm/ApplliancesElectronicsForm';
+import DecorForm from '../Forms/DecorForm/DecorForm';
+import MiscellaneousForm from '../Forms/MiscellaneousForm/MiscellaneousForm';
+import PaintColorForm from '../Forms/PaintColorForm/PaintColorForm';
+
 
 // import bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -106,28 +111,54 @@ function App() {
             exact
             path="/home"
           >
-              <LandingPage />
+            <LandingPage />
           </Route>
           <ProtectedRoute
             exact
             path="/room-profiles"
           >
-              <RoomProfiles />
+            <RoomProfiles />
           </ProtectedRoute>
           <ProtectedRoute
             exact
             path="/create-room"
           >
-              
-              <CreateRoom />
+
+            <CreateRoom />
           </ProtectedRoute>
           <ProtectedRoute
             exact
             path="/room-overview"
           >
 
-              <RoomOverview />
+            <RoomOverview />
           </ProtectedRoute>
+
+          <Route
+            exact
+            path="/app-elec-form">
+            <AppliancesElectronicsForm />
+
+          </Route>
+
+          <Route
+            exact
+            path="/decor-form">
+            <DecorForm />
+
+          </Route>
+
+          <Route
+            exact
+            path="/misc-form">
+            <MiscellaneousForm />
+          </Route>
+
+          <Route
+            exact
+            path="/paint-form">
+            <PaintColorForm />
+          </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
