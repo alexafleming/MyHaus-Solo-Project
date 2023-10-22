@@ -11,25 +11,25 @@ function PaintColorForm() {
             <div class="card">
                 <div class="card-body">
                     <form>
-                        <h2>FORM</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="brandName" placeholder="brand name" />
+                        <h2 class="form-title">FORM</h2>
+                        <div class="paint-form-style">
+                            <input type="text" class="form-input-style" id="brandName" placeholder="brand name" />
                         </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="colorName" placeholder="*paint color name" required />
+                        <div class="paint-form-style">
+                            <input type="text" class="form-input-style" id="colorName" placeholder="*paint color name" required />
                         </div>
 
-                        <div class="form-group">
-                            <label for="finish">Paint Finish:</label>
-                            <input type="text" class="form-control" id="finish" placeholder="paint finish" required />
+                        <div class="paint-form-style">
+
+                            <input type="text" class="form-input-style" id="finish" placeholder="paint finish" required />
                         </div>
 
-                        <div class="form-group">
-                            <textarea class="form-control" id="comments" rows="5" placeholder="additional comments"></textarea>
+                        <div class="paint-form-style additional-comments-margin">
+                            <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">SAVE</button>
+                        <button type="submit" class="btn save-btn-style">SAVE</button>
                     </form>
                 </div>
             </div>
