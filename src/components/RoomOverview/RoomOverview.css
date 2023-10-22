@@ -1,0 +1,51 @@
+.notes-title {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: large;
+}
+
+.notepad {
+    background-color: #f6f0e8;
+    border: none;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+
+.image-overview {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.accordion-color{
+background-color: #b5b0a0 !important;
+font-weight:800;
+}
+
+.right-align-btn{
+    text-align: right;
+}
+
+.accordion-item{
+    padding-top: 3px;
+}
+
+.accordion-item-padding{
+    padding-top: 4px;
+}
+
+.accordion-item:focus{
+    box-shadow: none;
+    color: black !important;
+}
+
+.room-overview-container{
+    padding-top: 20px;
+}

@@ -21,6 +21,12 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import RoomProfiles from '../RoomProfiles/RoomProfiles';
 import CreateRoom from '../CreateRoom/CreateRoom';
+import RoomOverview from '../RoomOverview/RoomOverview';
+import AppliancesElectronicsForm from '../Forms/ApplliancesElectronicsForm/ApplliancesElectronicsForm';
+import DecorForm from '../Forms/DecorForm/DecorForm';
+import MiscellaneousForm from '../Forms/MiscellaneousForm/MiscellaneousForm';
+import PaintColorForm from '../Forms/PaintColorForm/PaintColorForm';
+
 
 // import bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -80,7 +86,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/room-profiles" />
               :
               // Otherwise, show the login page
               <LoginPage />
@@ -94,7 +100,7 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/room-profiles" />
               :
               // Otherwise, show the registration page
               <RegisterPage />
@@ -105,40 +111,53 @@ function App() {
             exact
             path="/home"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
-              <LandingPage />
-            }
+            <LandingPage />
           </Route>
-          <Route
+          <ProtectedRoute
             exact
             path="/room-profiles"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
-              <RoomProfiles />
-            }
-          </Route>
-          <Route
+            <RoomProfiles />
+          </ProtectedRoute>
+          <ProtectedRoute
             exact
             path="/create-room"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Landing page
-              <CreateRoom />
-            }
+
+            <CreateRoom />
+          </ProtectedRoute>
+          <ProtectedRoute
+            exact
+            path="/room-overview"
+          >
+
+            <RoomOverview />
+          </ProtectedRoute>
+
+          <Route
+            exact
+            path="/app-elec-form">
+            <AppliancesElectronicsForm />
+
+          </Route>
+
+          <Route
+            exact
+            path="/decor-form">
+            <DecorForm />
+
+          </Route>
+
+          <Route
+            exact
+            path="/misc-form">
+            <MiscellaneousForm />
+          </Route>
+
+          <Route
+            exact
+            path="/paint-form">
+            <PaintColorForm />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

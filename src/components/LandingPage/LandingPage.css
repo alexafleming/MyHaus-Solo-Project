@@ -25,13 +25,13 @@
 .rounded-image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 10px; /* Adjust the border-radius as needed */
+  border-radius: 10px;
 }
 
 .rounded-image {
   display: block;
   width: 100%;
-  height: 400px; /* Set the desired height */
+  height: 400px;
 }
 
 .image-overlay {

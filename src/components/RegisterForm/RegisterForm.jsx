@@ -16,7 +16,7 @@ function RegisterForm() {
   
   const registerUser = (event) => {
     event.preventDefault();
-
+    debugger;
     dispatch({
       type: 'REGISTER',
       payload: {
@@ -97,11 +97,8 @@ function RegisterForm() {
   </div>
   <center>
         <button
-          type="button"
+          type="submit"
           className="reg-join-btn"
-          onClick={() => {
-            history.push('/login');
-          }}
         >
           JOIN
         </button>
