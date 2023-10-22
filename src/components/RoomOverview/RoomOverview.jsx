@@ -5,17 +5,21 @@ import './RoomOverview.css'
 function RoomOverview() {
     const history = useHistory();
 
+    const newForm = (path) => {
+        history.push(path);
+    };
+
 
 
     return (
-        <div>
+        <div class="container-fluid room-overview-container">
             <div >
 
 
 
                 <div class="container-overview-page">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-9">
                             <div class="row">
                                 <div class="col-md-8">
                                     <h2>ROOM NAME GOES HERE</h2>
@@ -26,10 +30,10 @@ function RoomOverview() {
                                             add new +
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">PAINT COLORS</a></li>
-                                            <li><a class="dropdown-item" href="#">DECOR</a></li>
-                                            <li><a class="dropdown-item" href="#">APPLIANCES + ELECTRONICS</a></li>
-                                            <li><a class="dropdown-item" href="#">MISCELLANEOUS</a></li>
+                                            <li><a class="dropdown-item" onClick={() => newForm("/paint-form")}>PAINT COLORS</a></li>
+                                            <li><a class="dropdown-item" onClick={() => newForm("/decor-form")}>DECOR</a></li>
+                                            <li><a class="dropdown-item" onClick={() => newForm("/app-elec-form")}>APPLIANCES + ELECTRONICS</a></li>
+                                            <li><a class="dropdown-item" onClick={() => newForm("/misc-form")}>MISCELLANEOUS</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -44,7 +48,29 @@ function RoomOverview() {
                                         </h2>
                                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body">
-                                                testing
+
+                                                <div class="row">
+                                                    <div class="col-md-1">
+                                                        <p>Behr</p>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <p>White</p>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <p>Eggshell</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p>Deciding to repaint my walls in a crisp, clean white brings a refreshing and timeless ambiance to my living space, creating a bright and versatile backdrop for any decor style. - 10/17/2023</p>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                    <button>delete</button> <button>edit</button>
+                                                    </div>
+                                                </div>
+
+
+
+
+
                                             </div>
                                         </div>
                                     </div>
