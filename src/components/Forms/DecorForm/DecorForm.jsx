@@ -18,12 +18,12 @@ function DecorForm() {
                         </div>
 
                         <div class="decor-form-style">
-                            <input type="text" class="form-input-style" id="colorName" placeholder="purchased from" />
+                            <input type="text" class="form-input-style" id="purchasedFrom" placeholder="purchased from" />
                         </div>
 
                         <div class="decor-form-style">
 
-                            <input type="text" class="form-input-style" id="finish" placeholder="website link" />
+                            <input type="text" class="form-input-style" id="websiteLink" placeholder="website link" />
                         </div>
 
                         <div class="decor-form-style additional-comments-margin">

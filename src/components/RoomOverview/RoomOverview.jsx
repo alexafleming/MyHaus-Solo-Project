@@ -26,7 +26,7 @@ function RoomOverview() {
                                 </div>
                                 <div class="col-md-4 right-align-btn">
                                     <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button class="btn drop-down-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             add new +
                                         </button>
                                         <ul class="dropdown-menu">

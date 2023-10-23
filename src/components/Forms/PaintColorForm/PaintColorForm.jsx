@@ -7,6 +7,7 @@ function PaintColorForm() {
 
 
     return (
+        <div class="paint-background">
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <div class="card">
                 <div class="card-body">
@@ -33,6 +34,7 @@ function PaintColorForm() {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
 
     );

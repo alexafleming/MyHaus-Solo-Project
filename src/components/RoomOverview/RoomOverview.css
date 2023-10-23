@@ -48,3 +48,8 @@ background-color: #b5b0a0 !important;;
 .room-overview-container{
     padding-top: 20px;
 }
+
+.drop-down-btn{
+    background-color: #b5b0a0 !important;
+    font-weight: bold !important;
+}
