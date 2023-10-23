@@ -16,7 +16,6 @@ function RegisterForm() {
   
   const registerUser = (event) => {
     event.preventDefault();
-    debugger;
     dispatch({
       type: 'REGISTER',
       payload: {
@@ -26,7 +25,7 @@ function RegisterForm() {
         password: password
       },
     });
-  }; // end registerUser
+  }; 
 
   return (
 <form className="join-form" onSubmit={registerUser}>
