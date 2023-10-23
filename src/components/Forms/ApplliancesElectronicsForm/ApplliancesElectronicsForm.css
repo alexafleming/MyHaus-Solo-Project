@@ -1,3 +1,10 @@
+.app-background{
+    background: url('https://studio-mcgee.com/app/uploads/2022/03/studiomcgee_HomeOnTheBay_WEB_090-scaled.jpeg') rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
 .app-form-style{
     padding-top: 2px;
     margin-left: 15px;
@@ -20,8 +27,9 @@
     text-align: left;
     border-radius: 5px;
     border: none;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 30px;
     padding-top: 5px;
     padding-bottom: 5px; 
+    width: 300px;
 }

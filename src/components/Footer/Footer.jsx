@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return(
-  <footer class="py-3 my-4 footer-bar">
+  <footer class="py-3 footer-bar">
     <ul class="nav justify-content-center pb-1 mb-1">
     <Link className="footer-link px-2 text-white" to="/login">
       LOGIN
