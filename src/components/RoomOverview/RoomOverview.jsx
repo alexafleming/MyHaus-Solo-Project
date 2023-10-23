@@ -6,7 +6,7 @@ function RoomOverview() {
     const history = useHistory();
 
     const newForm = (path) => {
-        history.push(path);
+        history.push(path + "/1");
     };
 
 

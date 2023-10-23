@@ -10,11 +10,9 @@ function PaintColorForm(param) {
     const [paintColorName, setPaintColorName] = useState('');
     const [paintFinish, setPaintFinish] = useState('');
     const [additionalComments, setAdditionalComments] = useState('');
-    console.log("ROOM ID:", id)
 
     // Function to handle the submit button click
     const handleSubmit = () => {
-        console.log("Handle Submit clicked")
         const paintFormSubmission = {
             brandName: brandName,
             paintColorName: paintColorName,
