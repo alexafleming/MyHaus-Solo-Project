@@ -22,7 +22,7 @@ function RoomOverview() {
                         <div class="col-md-9">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h2>ROOM NAME GOES HERE</h2>
+                                    <h2>BATHROOM</h2>
                                 </div>
                                 <div class="col-md-4 right-align-btn">
                                     <div class="dropdown">
@@ -60,7 +60,7 @@ function RoomOverview() {
                                                         <p>Eggshell</p>
                                                     </div>
                                                     <div class="col-md-8">
-                                                        <p>Deciding to repaint my walls in a crisp, clean white brings a refreshing and timeless ambiance to my living space, creating a bright and versatile backdrop for any decor style. - 10/17/2023</p>
+                                                        <p>Deciding to repaint my walls in a crisp, clean white brings a refreshing and timeless ambiance to my space, creating a bright and versatile backdrop for any decor style. - 10/17/2023</p>
                                                     </div>
                                                     <div class="col-md-1">
                                                     <button>delete</button> <button>edit</button>

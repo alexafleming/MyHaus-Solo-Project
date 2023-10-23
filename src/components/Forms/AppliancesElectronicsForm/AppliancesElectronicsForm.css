@@ -19,6 +19,7 @@
 .form-title{
     text-align: left;
     padding-left: 18px;
+    font-weight: bold;
 }
 
 .form-input-style{
@@ -32,4 +33,17 @@
     padding-top: 5px;
     padding-bottom: 5px; 
     width: 300px;
+}
+
+.save-btn-style{
+    border: none; 
+    width: 125px;
+    height: 50px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    text-align: center; 
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+   
 }

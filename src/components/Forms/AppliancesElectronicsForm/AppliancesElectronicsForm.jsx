@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import './ApplliancesElectronicsForm.css'
+import './AppliancesElectronicsForm.css'
 
 function AppliancesElectronicsForm() {
 
@@ -13,7 +13,7 @@ function AppliancesElectronicsForm() {
           <div class="card">
             <div class="card-body">
               <form>
-                <h2 class="form-title">FORM</h2>
+                <p class="form-title">APPLIANCES | ELECTRONICS</p>
                 <div class="app-form-style">
                   <input type="text" class="form-input-style" id="item" placeholder="*item" required />
                 </div>
@@ -40,8 +40,11 @@ function AppliancesElectronicsForm() {
                 <div class="app-form-style additional-comments-margin">
                   <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments"></textarea>
                 </div>
-
-                <button type="submit" class="btn save-btn-style">SAVE</button>
+                <div class='row'>
+                  <div class="col-md-12 d-flex justify-content-center">
+                    <button type="submit" class="btn save-btn-style">SAVE</button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>

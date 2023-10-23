@@ -22,7 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import RoomProfiles from '../RoomProfiles/RoomProfiles';
 import CreateRoom from '../CreateRoom/CreateRoom';
 import RoomOverview from '../RoomOverview/RoomOverview';
-import AppliancesElectronicsForm from '../Forms/ApplliancesElectronicsForm/ApplliancesElectronicsForm';
+import AppliancesElectronicsForm from '../Forms/AppliancesElectronicsForm/AppliancesElectronicsForm';
 import DecorForm from '../Forms/DecorForm/DecorForm';
 import MiscellaneousForm from '../Forms/MiscellaneousForm/MiscellaneousForm';
 import PaintColorForm from '../Forms/PaintColorForm/PaintColorForm';

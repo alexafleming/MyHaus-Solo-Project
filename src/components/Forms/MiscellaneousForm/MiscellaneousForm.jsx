@@ -12,7 +12,7 @@ function MiscellaneousForm() {
             <div class="card">
                 <div class="card-body">
                     <form>
-                        <h2 class="form-title">FORM</h2>
+                    <p class="misc-form-title">MISCELLANEOUS</p>
                         <div class="misc-form-style">
                             <input type="text" class="form-input-style" id="item" placeholder="*item" />
                         </div>
@@ -24,8 +24,11 @@ function MiscellaneousForm() {
                         <div class="misc-form-style additional-comments-margin">
                             <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments"></textarea>
                         </div>
-
-                        <button type="submit" class="btn save-btn-style">SAVE</button>
+                        <div class='row'>
+                                <div class="col-md-12 d-flex justify-content-center">
+                                    <button type="submit" class="btn save-btn-style">SAVE</button>
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>

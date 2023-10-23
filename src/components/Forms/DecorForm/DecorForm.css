@@ -12,18 +12,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    .save-btn-style{
-        border: none;
-        width: 125px;
-        height: 50px;
-        margin-top: 15px;
-        background-color: #ffffff;
-        text-align: center; 
-        font-weight: bold;
-        margin-left: 55px;
-        margin-top: 20px;
-}
-
 }
 
 .decor-form-style{
@@ -37,9 +25,10 @@
     padding-top: 5px;
 }
 
-.form-title{
+.decor-form-title{
     text-align: left;
     padding-left: 18px;
+    font-weight: bold;
 }
 
 .form-input-style{
@@ -52,4 +41,17 @@
     padding-right: 30px;
     padding-top: 5px;
     padding-bottom: 5px; 
+}
+
+.save-btn-style{
+    border: none; 
+    width: 125px;
+    height: 50px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    text-align: center; 
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+   
 }
