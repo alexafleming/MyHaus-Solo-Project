@@ -156,7 +156,7 @@ function App() {
 
           <Route
             exact
-            path="/paint-form">
+            path="/paint-form/:id">
             <PaintColorForm />
           </Route>
 

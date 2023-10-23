@@ -29,7 +29,7 @@ CREATE TABLE "paint_form" (
     "brand_name" VARCHAR (80) NOT NULL,
     "paint_color_name" VARCHAR (100) NOT NULL,
     "paint_finish" VARCHAR (50) NULL,
-    "addtional_comments" VARCHAR (1000) NULL,
+    "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE "decor_form" (
     "item" VARCHAR (100) NOT NULL,
     "purchased_from" VARCHAR (150) NULL,
     "website_link" TEXT NULL,
-    "addtional_comments" VARCHAR (1000) NULL,
+    "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
 
@@ -51,7 +51,7 @@ CREATE TABLE "appliances_electronics_form" (
     "brand_name" VARCHAR (150) NOT NULL,
     "model_number" VARCHAR NULL,
     "warrenty_info" VARCHAR NULL,
-    "addtional_comments" VARCHAR (1000) NULL,
+    "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
 
@@ -60,6 +60,6 @@ CREATE TABLE "miscellaneous_form" (
     "id" SERIAL PRIMARY KEY,
     "item" VARCHAR (100) NOT NULL,
     "brand_name" VARCHAR (150) NOT NULL,
-    "addtional_comments" VARCHAR (1000) NULL,
+    "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
