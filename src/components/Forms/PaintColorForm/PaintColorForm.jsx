@@ -40,20 +40,20 @@ function PaintColorForm(param) {
                         <form  onSubmit={handleSubmit}>
                             <p class="paint-form-title">PAINT COLORS</p>
                             <div class="paint-form-style">
-                                <input type="text" class="form-input-style" id="brandName" placeholder="brand name" onChange={(event) => setBrandName(event.target.value)} />
+                                <input type="text" class="form-input-style" id="brandName" placeholder="brand name" autoComplete='off' onChange={(event) => setBrandName(event.target.value)} />
                             </div>
 
                             <div class="paint-form-style">
-                                <input type="text" class="form-input-style" id="colorName" placeholder="*paint color name" required onChange={(event) => setPaintColorName(event.target.value)} />
+                                <input type="text" class="form-input-style" id="colorName" placeholder="*paint color name" autoComplete='off' required onChange={(event) => setPaintColorName(event.target.value)} />
                             </div>
 
                             <div class="paint-form-style">
 
-                                <input type="text" class="form-input-style" id="finish" placeholder="*paint finish" required onChange={(event) => setPaintFinish(event.target.value)} />
+                                <input type="text" class="form-input-style" id="finish" placeholder="*paint finish" autoComplete='off' required onChange={(event) => setPaintFinish(event.target.value)} />
                             </div>
 
                             <div class="paint-form-style additional-comments-margin">
-                                <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments" onChange={(event) => setAdditionalComments(event.target.value)}></textarea>
+                                <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments" autoComplete='off' onChange={(event) => setAdditionalComments(event.target.value)}></textarea>
                             </div>
                             <div class='row'>
                                 <div class="col-md-12 d-flex justify-content-center">

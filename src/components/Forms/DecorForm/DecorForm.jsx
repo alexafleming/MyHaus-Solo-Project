@@ -41,20 +41,20 @@ function DecorForm(param) {
                         <form onSubmit={handleSubmit}>
                             <p class="decor-form-title">DECORS</p>
                             <div class="decor-form-style">
-                                <input type="text" class="form-input-style" id="item" placeholder="*item" required onChange={(event) => setItem(event.target.value)} />
+                                <input type="text" class="form-input-style" id="item" placeholder="*item" autoComplete='off' required onChange={(event) => setItem(event.target.value)} />
                             </div>
 
                             <div class="decor-form-style">
-                                <input type="text" class="form-input-style" id="purchasedFrom" placeholder="purchased from" onChange={(event) => setPurchasedFrom(event.target.value)} />
+                                <input type="text" class="form-input-style" id="purchasedFrom" placeholder="purchased from" autoComplete='off' onChange={(event) => setPurchasedFrom(event.target.value)} />
                             </div>
 
                             <div class="decor-form-style">
 
-                                <input type="text" class="form-input-style" id="websiteLink" placeholder="website link" onChange={(event) => setWebsiteLink(event.target.value)} />
+                                <input type="text" class="form-input-style" id="websiteLink" placeholder="website link" autoComplete='off' onChange={(event) => setWebsiteLink(event.target.value)} />
                             </div>
 
                             <div class="decor-form-style additional-comments-margin">
-                                <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments" onChange={(event) => setAdditionalComments(event.target.value)}></textarea>
+                                <textarea class="form-input-style" id="comments" rows="5" placeholder="additional comments" autoComplete='off' onChange={(event) => setAdditionalComments(event.target.value)}></textarea>
                             </div>
                             <div class='row'>
                                 <div class="col-md-12 d-flex justify-content-center">

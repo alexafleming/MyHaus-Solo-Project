@@ -48,7 +48,7 @@ CREATE TABLE "decor_form" (
 CREATE TABLE "appliances_electronics_form" (
     "id" SERIAL PRIMARY KEY,
     "item" VARCHAR (100) NOT NULL,
-    "price_of_item" VARCHAR (100) NOT NULL,
+    "price_of_item" numeric(10, 2) NOT NULL,
     "brand_name" VARCHAR (150) NOT NULL,
     "model_number" VARCHAR NULL,
     "warrenty_info" VARCHAR NULL,
