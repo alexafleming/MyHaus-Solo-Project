@@ -7,7 +7,7 @@ function MiscellaneousForm() {
   
   
     return (
-      <div>
+      <div class="misc-background">
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <div class="card">
                 <div class="card-body">

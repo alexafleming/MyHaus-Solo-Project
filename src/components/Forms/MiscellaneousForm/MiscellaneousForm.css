@@ -1,3 +1,10 @@
+.misc-background{
+    background: url('/public/images/misc-image.jpeg') rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
 .card{
     background-color: #b5b0a0 !important;
     padding-left: 10px;

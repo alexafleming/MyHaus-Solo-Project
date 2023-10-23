@@ -1,3 +1,10 @@
+.decor-background{
+        background: url('https://studio-mcgee.com/app/uploads/2017/10/studiomcgee_beckhamproject_131-scaled.jpg') rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+}
+
 .card{
     background-color: #b5b0a0 !important;
     padding-left: 10px;

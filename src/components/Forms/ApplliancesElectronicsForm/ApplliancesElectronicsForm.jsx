@@ -8,7 +8,7 @@ function AppliancesElectronicsForm() {
 
   return (
     <div>
-      <div>
+      <div class="app-background">
         <div class="container d-flex justify-content-center align-items-center vh-100">
           <div class="card">
             <div class="card-body">
