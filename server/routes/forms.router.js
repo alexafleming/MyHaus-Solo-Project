@@ -63,4 +63,21 @@ router.post('/appform', (req, res) => {
         });
 });
 
+router.post('/miscform', (req, res) => {
+    let miscFormSubmission = req.body;
+   
+
+    let queryText = `INSERT INTO "miscellaneous_form" ("item", "brand_name", "additional_comments", "room_id")
+  VALUES ($1, $2, $3, $4);`;
+    pool.query(queryText, [miscFormSubmission.item, miscFormSubmission.brandName, miscFormSubmission.additionalComments, miscFormSubmission.roomId])
+        .then(result => {
+            res.sendStatus(201);
+        })
+        .catch(error => {
+            console.log(`Error adding new miscellaneous form`, error);
+            res.sendStatus(500);
+        });
+});
+
+
 module.exports = router;

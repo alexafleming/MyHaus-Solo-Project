@@ -150,7 +150,7 @@ function App() {
 
           <Route
             exact
-            path="/misc-form">
+            path="/misc-form/:id">
             <MiscellaneousForm />
           </Route>
 
