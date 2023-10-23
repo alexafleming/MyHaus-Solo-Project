@@ -48,4 +48,19 @@ router.post('/decorform', (req, res) => {
 });
 
 
+router.post('/appform', (req, res) => {
+    let appliancesFormSubmission = req.body;
+
+    let queryText = `INSERT INTO "appliances_electronics_form" ("item", "brand_name","price_of_item", "model_number", "warrenty_info", "additional_comments", "room_id")
+  VALUES ($1, $2, $3, $4, $5, $6, $7);`;
+    pool.query(queryText, [appliancesFormSubmission.item,  appliancesFormSubmission.brandName,  appliancesFormSubmission.priceOfItem, appliancesFormSubmission.modelNumber , appliancesFormSubmission.warrentyInfo, appliancesFormSubmission.additionalComments,  appliancesFormSubmission.roomId])
+        .then(result => {
+            res.sendStatus(201);
+        })
+        .catch(error => {
+            console.log(`Error adding new appliances + electronics form`, error);
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;

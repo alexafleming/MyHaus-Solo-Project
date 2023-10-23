@@ -136,7 +136,7 @@ function App() {
 
           <Route
             exact
-            path="/app-elec-form">
+            path="/app-elec-form/:id">
             <AppliancesElectronicsForm />
 
           </Route>
