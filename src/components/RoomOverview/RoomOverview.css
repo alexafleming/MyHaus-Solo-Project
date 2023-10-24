@@ -53,3 +53,12 @@ background-color: #b5b0a0 !important;;
     background-color: #b5b0a0 !important;
     font-weight: bold !important;
 }
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,.125) !important;
+}
+
+.accordion-button:not(.collapsed){
+    color: black !important;
+}
