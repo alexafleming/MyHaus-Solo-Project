@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './RoomOverview.css'
+import { useDispatch } from 'react-redux';
 
 function RoomOverview() {
     const history = useHistory();
+    const dispatch = useDispatch();
+    // const { id } = useParams();
+
+    useEffect(() => {
+        dispatch({type: 'FETCH_FORMS_DETAILS', payload: 1 })
+    }, []);
 
     const newForm = (path) => {
         history.push(path + "/1");

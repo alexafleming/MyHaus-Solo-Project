@@ -8,9 +8,49 @@ const router = express.Router();
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
-    // GET route code here
-});
+
+router.get('/:id', async (req, res) => {
+    try {
+      const paintFormQuery = `
+        SELECT * FROM paint_form
+        WHERE room_id = $1
+      `;
+  
+      const decorFormQuery = `
+        SELECT * FROM decor_form 
+        WHERE room_id = $1
+      `;
+
+      const appFormQuery = `
+        SELECT * FROM appliances_electronics_form
+         WHERE room_id = $1
+      `;
+
+      const miscFormQuery = `
+        SELECT * FROM miscellaneous_form
+         WHERE room_id = $1
+      `;
+  
+      // Using Promise.all to execute both queries concurrently
+      const [paintResults, decorResults, appResultS, miscResults] = await Promise.all([
+        pool.query(paintFormQuery, [req.params.id]),
+        pool.query(decorFormQuery, [req.params.id]),
+        pool.query(appFormQuery, [req.params.id]),
+        pool.query(miscFormQuery, [req.params.id]),
+      ]);
+  
+      res.send({
+        paintForm: paintResults.rows,
+        decorForm: decorResults.rows,
+        appForm: appResultS.rows,
+        miscForm: miscResults.rows,
+      });
+    } catch (err) {
+      console.error('ERROR:', err);
+      res.sendStatus(500);
+    }
+  });
+  
 
 /**
  * POST route template
