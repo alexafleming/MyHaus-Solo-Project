@@ -1,3 +1,51 @@
-.create-room{
+.create-room-background{
+    background: url('https://studio-mcgee.com/app/uploads/2022/10/studiomcgee_HilltopEstate_140_web-672x450.jpeg') rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
 
+.create-room {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .upload-btn-style {
+        border: none;
+        width: 140px;
+        height: 40px;
+        margin-top: 15px;
+        background-color: #f6f0e8;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.create-room-input-style {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+}
+
+
+.create-room-style {
+    padding-top: 2px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.create-room-title {
+    text-align: left;
+    padding-left: 18px;
+    font-weight: bold;
 }
