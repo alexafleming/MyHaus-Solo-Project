@@ -25,7 +25,7 @@ function Footer() {
         </Link>
         </ul>
         <hr className="my-1" />
-    <p className="text-center">&copy; Prime Digital Academy</p>
+    <p className="text-center">Created By Alexa Fleming</p>
     
 
    
