@@ -27,7 +27,6 @@ import DecorForm from '../Forms/DecorForm/DecorForm';
 import MiscellaneousForm from '../Forms/MiscellaneousForm/MiscellaneousForm';
 import PaintColorForm from '../Forms/PaintColorForm/PaintColorForm';
 
-
 // import bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

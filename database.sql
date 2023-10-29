@@ -64,3 +64,10 @@ CREATE TABLE "miscellaneous_form" (
     "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );
+
+CREATE TABLE "images" (
+	"id" SERIAL PRIMARY KEY,
+	"path" VARCHAR(2048) NOT NULL
+    "room_name" VARCHAR (1000) NOT NULL,
+    "room_id" INTEGER REFERENCES rooms
+);
