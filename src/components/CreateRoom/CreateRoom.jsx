@@ -12,11 +12,10 @@ function createRoom() {
 
     const addRoom = (e) => {
         e.preventDefault();
-        dispatch({ type: 'ADD_ROOM', payload: { name: roomName }, fileToUpload: roomPhoto })
+        dispatch({ type: 'ADD_ROOM', payload: { roomName: roomName , image: roomPhoto }})
     }
 
     const onFileChange = async (event) => {
-        debugger
         // Access the selected file
         const fileToUpload = event.target.files[0];
 
@@ -37,7 +36,7 @@ function createRoom() {
             <div class="container d-flex justify-content-center align-items-center vh-100">
                 <div class="card">
                     <div class="card-body">
-                        <form class="create-room">
+                        <form class="create-room"  onSubmit={addRoom}>
                             <p class="create-room-title">CREATE NEW ROOM</p>
 
 
@@ -61,7 +60,7 @@ function createRoom() {
 
                             <div class='row'>
                                 <div class="col-md-12 d-flex justify-content-center">
-                                    <button type="submit" class="btn save-btn-style" onClick={() => addRoom}>SAVE</button>
+                                    <button type="submit" class="btn save-btn-style">SAVE</button>
                                 </div>
                             </div>
                         </form>

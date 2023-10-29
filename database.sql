@@ -18,7 +18,7 @@ CREATE TABLE "users" (
 CREATE TABLE "rooms" (
     "id" SERIAL PRIMARY KEY,
     "room_name" VARCHAR (80) NOT NULL,
-    "image" TEXT NULL,
+    "image" VARCHAR(2048) NULL,
     "user_id" INTEGER REFERENCES users,
     "notes" VARCHAR (1000) NULL
 );
@@ -65,9 +65,3 @@ CREATE TABLE "miscellaneous_form" (
     "room_id" INTEGER REFERENCES rooms
 );
 
-CREATE TABLE "images" (
-	"id" SERIAL PRIMARY KEY,
-	"path" VARCHAR(2048) NOT NULL
-    "room_name" VARCHAR (1000) NOT NULL,
-    "room_id" INTEGER REFERENCES rooms
-);
