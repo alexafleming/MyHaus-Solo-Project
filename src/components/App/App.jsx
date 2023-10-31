@@ -127,7 +127,7 @@ function App() {
           </ProtectedRoute>
           <ProtectedRoute
             exact
-            path="/room-overview"
+            path="/room-overview/:id"
           >
 
             <RoomOverview />

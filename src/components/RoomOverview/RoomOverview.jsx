@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 function RoomOverview() {
     const history = useHistory();
     const dispatch = useDispatch();
-    // const { id } = useParams();
+    //const { id } = useParams();
 
     useEffect(() => {
         dispatch({type: 'FETCH_FORMS_DETAILS', payload: 1 })

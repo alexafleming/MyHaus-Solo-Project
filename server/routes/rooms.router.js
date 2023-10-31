@@ -22,4 +22,21 @@ router.post('/', (req, res) => {
     }
 });
 
+router.get('/', (req, res) => {
+    console.log('/');
+    console.log('is authenticated?', req.isAuthenticated());
+    if(req.isAuthenticated()) {
+        let queryText = `SELECT * FROM "rooms" WHERE "user_id" = $1;`;
+        let queryParams = [req.user.id];
+        pool.query(queryText, queryParams).then((result) => {
+            res.send(result.rows);
+        }).catch((error) => {
+            console.log(error);
+            res.sendStatus(500);
+        });
+    } else {
+        res.sendStatus(401);
+    }
+});
+
 module.exports = router;
