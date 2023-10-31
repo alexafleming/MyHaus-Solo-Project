@@ -12,7 +12,8 @@ function createRoom() {
 
     const addRoom = (e) => {
         e.preventDefault();
-        dispatch({ type: 'ADD_ROOM', payload: { roomName: roomName , image: roomPhoto }})
+        dispatch({ type: 'ADD_ROOM', payload: { roomName: roomName , image: roomPhoto }});
+        history.push('/room-profiles')
     }
 
     const onFileChange = async (event) => {

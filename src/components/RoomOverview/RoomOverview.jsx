@@ -1,19 +1,34 @@
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import './RoomOverview.css'
-import { useDispatch } from 'react-redux';
 
 function RoomOverview() {
     const history = useHistory();
     const dispatch = useDispatch();
-    //const { id } = useParams();
+    const { id } = useParams();
+    const roomsList = useSelector((store) => store.rooms);
+    const [roomOverview, setRoomOverview] = useState({});
+    const formsList = useSelector((store) => store.forms.data);
+
+    function getRoomById() {
+        const roomId = parseInt(id);
+        for (const room of roomsList) {
+            if (room.id === roomId) {
+                setRoomOverview(room);
+            }
+        }
+    }
+
 
     useEffect(() => {
-        dispatch({type: 'FETCH_FORMS_DETAILS', payload: 1 })
+        dispatch({ type: 'FETCH_ROOM_LIST' })
+        dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
+        getRoomById();
     }, []);
 
     const newForm = (path) => {
-        history.push(path + "/1");
+        history.push(path + `/${id}`);
     };
 
 
@@ -29,7 +44,9 @@ function RoomOverview() {
                         <div class="col-md-9">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h2>BATHROOM</h2>
+                                    <h2>
+                                        {roomOverview.room_name}
+                                    </h2>
                                 </div>
                                 <div class="col-md-4 right-align-btn">
                                     <div class="dropdown">
@@ -55,29 +72,27 @@ function RoomOverview() {
                                         </h2>
                                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body">
-
-                                                <div class="row">
-                                                    <div class="col-md-1">
-                                                        <p>Behr</p>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <p>White</p>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                        <p>Eggshell</p>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <p>Deciding to repaint my walls in a crisp, clean white brings a refreshing and timeless ambiance to my space, creating a bright and versatile backdrop for any decor style. - 10/17/2023</p>
-                                                    </div>
-                                                    <div class="col-md-1">
-                                                    <button>delete</button> <button>edit</button>
-                                                    </div>
-                                                </div>
-
-
-
-
-
+                                            {
+                                                    formsList.paintForm.map(form => (
+                                                        <div class="row">
+                                                            <div class="col-md-1">
+                                                                <p>{form.brand_name}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>{form.paint_color_name}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>{form.paint_finish}</p>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <p>{form.additional_comments}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <button>delete</button> <button>edit</button>
+                                                            </div>
+                                                        </div>
+                                                    ))
+                                                }
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +131,7 @@ function RoomOverview() {
 
                         </div>
                         <div class="col-md-3">
-                            <img className="image-overview" src="images/decor-image.jpg" />
+                            <img className="image-overview" src={roomOverview.image} />
                             <div class="col-md-4" >
                                 <div className="notes-title">Notes</div>
                                 <div class="form-group">
