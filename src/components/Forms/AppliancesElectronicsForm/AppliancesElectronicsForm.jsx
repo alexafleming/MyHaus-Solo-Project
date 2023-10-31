@@ -10,6 +10,7 @@ function AppliancesElectronicsForm(params) {
     const [item, setItem] = useState('');
     const [brandName, setBrandName] = useState('');
     const [priceOfItem, setPriceOfItem] = useState(0);
+    const [warrentyInfo, setWarrentyInfo] = useState('');
     const [modelNumber, setModelNumber] = useState('');
     const [additionalComments, setAdditionalComments] = useState('');
 
@@ -18,6 +19,7 @@ function AppliancesElectronicsForm(params) {
             item: item,
             brandName: brandName,
             priceOfItem: priceOfItem,
+            warrentyInfo: warrentyInfo,
             modelNumber: modelNumber,
             additionalComments: additionalComments,
             roomId: id
@@ -26,7 +28,7 @@ function AppliancesElectronicsForm(params) {
         axios
             .post('/api/forms/appform', appFormSubmission)
             .then(response => {
-                history.push('/room-overview'); //WILL NEED TO ADD ROOM ID IN FUTURE!
+                history.push(`/room-overview${id}`);
             })
             .catch(error => {
                 console.log(error);
@@ -48,7 +50,7 @@ function AppliancesElectronicsForm(params) {
                 </div>
 
                 <div class="decor-form-style">
-                  <input type="text" class="form-input-style" id="brandName" placeholder="brand name" autoComplete='off' required onChange={(event) => setBrandName(event.target.value)}/>
+                  <input type="text" class="form-input-style" id="brandName" placeholder="*brand name" autoComplete='off' required onChange={(event) => setBrandName(event.target.value)}/>
                 </div>
 
                 <div class="app-form-style">

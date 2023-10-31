@@ -1,6 +1,9 @@
 const formsReducer = (state = {
   data: {
-    paintForm:[]
+    paintForm:[],
+    decorForm: [],
+    appForm: [],
+    miscForm: []
   }
 }, action) => {
     switch (action.type) {

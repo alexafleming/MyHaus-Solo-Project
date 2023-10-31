@@ -70,10 +70,11 @@ function RoomOverview() {
                                                 PAINT COLORS
                                             </button>
                                         </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                            {
-                                                    formsList.paintForm.map(form => (
+                                        {
+                                            formsList.paintForm.map(form => (
+                                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+
                                                         <div class="row">
                                                             <div class="col-md-1">
                                                                 <p>{form.brand_name}</p>
@@ -91,32 +92,89 @@ function RoomOverview() {
                                                                 <button>delete</button> <button>edit</button>
                                                             </div>
                                                         </div>
-                                                    ))
-                                                }
-                                            </div>
-                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
+
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed accordion-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                                 DECOR
                                             </button>
                                         </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                            </div>
-                                        </div>
-                                    </div>
+                                        {
+                                            formsList.decorForm.map(form => (
+                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+
+                                                        <div class="row">
+                                                            <div class="col-md-2">
+                                                                <p>{form.purchased_from}</p>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <p>{form.additional_comments}</p>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                            <a href={form.website_link} target="_blank"> Website Link</a>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <button>delete</button> <button>edit</button>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }                                   
+                                </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed accordion-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 APPLIANCES + ELECTRONICS
                                             </button>
                                         </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                            </div>
-                                        </div>
+                                        {
+                                            formsList.appForm.map(form => (
+                                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+
+                                                        <div class="row">
+                                                            <div class="col-md-2">
+                                                                <p>{form.item}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <p>{form.price_of_item}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                            <p>{form.brand_name}</p>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                            <p>{form.model_number}</p>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                            <p>{form.warrwnty_info}</p>
+                                                                
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <p>{form.additional_comments}</p>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <button>delete</button> <button>edit</button>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            ))
+                                        } 
                                     </div>
                                 </div>
                                 <div class="accordion-item accordion-item-padding">
