@@ -75,11 +75,10 @@ function RoomOverview() {
                                                 PAINT COLORS
                                             </button>
                                         </h2>
-                                        {
-                                            formsList.paintForm.map(form => (
-                                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                {
+                                                    formsList.paintForm.map(form => (
                                                         <div class="row">
                                                             <div class="col-md-3">
                                                                 <p>{form.brand_name}</p>
@@ -98,10 +97,10 @@ function RoomOverview() {
                                                                 <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="accordion-item">
@@ -110,11 +109,10 @@ function RoomOverview() {
                                                 DECOR
                                             </button>
                                         </h2>
-                                        {
-                                            formsList.decorForm.map(form => (
-                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                {
+                                                    formsList.decorForm.map(form => (
                                                         <div class="row">
                                                             <div class="col-md-2">
                                                                 <p>{form.purchased_from}</p>
@@ -135,10 +133,10 @@ function RoomOverview() {
                                                                 <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
@@ -146,11 +144,11 @@ function RoomOverview() {
                                                 APPLIANCES + ELECTRONICS
                                             </button>
                                         </h2>
-                                        {
-                                            formsList.appForm.map(form => (
-                                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
 
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                {
+                                                    formsList.appForm.map(form => (
                                                         <div class="row">
 
                                                             <div class="col-md-2">
@@ -175,10 +173,11 @@ function RoomOverview() {
                                                                 <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="accordion-item accordion-item-padding">
@@ -187,11 +186,10 @@ function RoomOverview() {
                                             MISCELLANEOUS
                                         </button>
                                     </h2>
-                                    {
-                                        formsList.miscForm.map(form => (
-                                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">
-
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            {
+                                                formsList.miscForm.map(form => (
                                                     <div class="row">
 
                                                         <div class="col-md-2">
@@ -212,12 +210,10 @@ function RoomOverview() {
                                                             <i class="bi bi-trash3"></i>
                                                         </div>
                                                     </div>
-
-
-                                                </div>
-                                            </div>
-                                        ))
-                                    }
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
