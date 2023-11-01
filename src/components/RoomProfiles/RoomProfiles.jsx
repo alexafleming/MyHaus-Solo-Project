@@ -36,18 +36,29 @@ function roomProfiles() {
                     </div>
                 </div>
 
-                {
-                    roomsList.map(rooms => (
-                        <div className="col-3">
+                {roomsList.length === 0 ? (
+                    <div className='col-9'>
+                        <div className='row landing-page-banner mx-auto'>
+                            <div className='col-12'>
+                                <h2 className="welcomeText text-center mx-auto">WELCOME TO MYHAUS</h2>
+                                <p className="h5 text-center landing-page-desc mx-auto">
+                                    CREATE YOUR FIRST ROOM PROFILE!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    roomsList.map((room) => (
+                        <div className="col-3" key={room.id}>
                             <div className="rounded-image-container">
-                                <img className="rounded-image" src={rooms.image}/>
-                                <div className="image-overlay" onClick={() => roomOverviewPage(rooms.id)}>
-                                    <p className="overlay-text">{rooms.room_name}</p>
+                                <img className="rounded-image" src={room.image} alt={room.room_name} />
+                                <div className="image-overlay" onClick={() => roomOverviewPage(room.id)}>
+                                    <p className="overlay-text">{room.room_name}</p>
                                 </div>
                             </div>
                         </div>
                     ))
-                }
+                )}
             </div>
         </div>
     );
