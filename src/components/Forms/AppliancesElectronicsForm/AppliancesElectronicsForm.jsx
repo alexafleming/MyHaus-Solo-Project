@@ -28,7 +28,7 @@ function AppliancesElectronicsForm(params) {
         axios
             .post('/api/forms/appform', appFormSubmission)
             .then(response => {
-                history.push(`/room-overview${id}`);
+                history.push(`/room-overview/${id}`);
             })
             .catch(error => {
                 console.log(error);

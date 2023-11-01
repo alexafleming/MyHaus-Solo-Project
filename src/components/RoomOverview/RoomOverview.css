@@ -62,3 +62,7 @@ background-color: #b5b0a0 !important;;
 .accordion-button:not(.collapsed){
     color: black !important;
 }
+
+.pricebold{
+    font-weight: 700;
+}
