@@ -81,23 +81,23 @@ function RoomOverview() {
                                                     <div class="accordion-body">
 
                                                         <div class="row">
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-3">
                                                                 <p>{form.brand_name}</p>
                                                             </div>
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-2">
                                                                 <p>{form.paint_color_name}</p>
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <p>{form.paint_finish}</p>
                                                             </div>
-                                                            <div class="col-md-8">
+                                                            <div class="col-md-5">
                                                                 <p>{form.additional_comments}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <button>delete</button> <button>edit</button>
+                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             ))
@@ -129,14 +129,12 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <a href={form.website_link} target="_blank"> Website Link</a>
-
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <button>delete</button> <button>edit</button>
+                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-
-
                                                     </div>
                                                 </div>
                                             ))
@@ -157,34 +155,26 @@ function RoomOverview() {
 
                                                             <div class="col-md-2">
                                                                 <p>{form.brand_name}</p>
-
-                                                            </div>
-
-                                                            <div class="col-md-2">
                                                                 <p>{form.item}</p>
                                                             </div>
-
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-2">
                                                                 <p>{form.model_number}</p>
+                                                                <p>{form.warrenty_info}</p>
 
                                                             </div>
-                                                            <div class="col-md-1">
-                                                                <p>{form.warrwnty_info}</p>
-                                                            </div>
 
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-5">
                                                                 <p>{form.additional_comments}</p>
                                                             </div>
 
-                                                            <div class="col-md-1 pricebold">
+                                                            <div class="col-md-2 pricebold">
                                                                 <p>${form.price_of_item}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <button>delete</button> <button>edit</button>
+                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-trash3"></i>
                                                             </div>
                                                         </div>
-
-
                                                     </div>
                                                 </div>
                                             ))
@@ -217,9 +207,9 @@ function RoomOverview() {
                                                         <div class="col-md-7">
                                                             <p>{form.additional_comments}</p>
                                                         </div>
-
                                                         <div class="col-md-1">
-                                                            <button>delete</button> <button>edit</button>
+                                                            <i class="bi bi-pencil  me-2"></i>
+                                                            <i class="bi bi-trash3"></i>
                                                         </div>
                                                     </div>
 
