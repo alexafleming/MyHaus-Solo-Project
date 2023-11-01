@@ -21,7 +21,7 @@ function MiscellaneousForm(params) {
         axios
             .post('/api/forms/miscform', miscFormSubmission)
             .then(response => {
-                history.push('/room-overview'); //WILL NEED TO ADD ROOM ID IN FUTURE!
+                history.push(`/room-overview/${id}`);
             })
             .catch(error => {
                 console.log(error);

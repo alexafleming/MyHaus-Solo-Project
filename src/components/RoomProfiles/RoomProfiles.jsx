@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './RoomProfiles.css'
 
 function roomProfiles() {
     const history = useHistory();
+    const dispatch = useDispatch();
+    const roomsList = useSelector((store) => store.rooms);
+
+    useEffect(() => {
+        getRoomList();
+    }, []);
+
+    const getRoomList = () => {
+        dispatch({ type: 'FETCH_ROOM_LIST' })
+    }
 
     const createNewRoom = () => {
         history.push('/create-room');
-      };
+    };
 
-      const roomOverviewPage = () => {
-        history.push('/room-overview');
-      };
+    const roomOverviewPage = (id) => {
+        history.push(`/room-overview/${id}`);
+    };
 
     return (
         <div className="room-profile-images">
@@ -19,35 +30,24 @@ function roomProfiles() {
                 <div className="col-3">
                     <div className="rounded-image-container">
                         <img className="rounded-image" src="images/decor-image.jpg" alt="Decor" />
-                        <div className="image-overlay-add"  onClick={createNewRoom}>
+                        <div className="image-overlay-add" onClick={createNewRoom}>
                             <p className="overlay-text-add">+</p>
                         </div>
                     </div>
                 </div>
-                <div className="col-3">
-                    <div className="rounded-image-container">
-                        <img className="rounded-image" src="images/bathroom-image.jpg" alt="Documents" />
-                        <div className="image-overlay" onClick={roomOverviewPage}>
-                            <p className="overlay-text">bathroom</p>
+
+                {
+                    roomsList.map(rooms => (
+                        <div className="col-3">
+                            <div className="rounded-image-container">
+                                <img className="rounded-image" src={rooms.image}/>
+                                <div className="image-overlay" onClick={() => roomOverviewPage(rooms.id)}>
+                                    <p className="overlay-text">{rooms.room_name}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="col-3">
-                    <div className="rounded-image-container">
-                        <img className="rounded-image" src="images/laundry-room.jpg" alt="Home Projects" />
-                        <div className="image-overlay" onClick={roomOverviewPage}>
-                            <p className="overlay-text">laundry</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-3">
-                    <div className="rounded-image-container">
-                        <img className="rounded-image" src="images/appliances-image.jpg" alt="Appliances" />
-                        <div className="image-overlay" onClick={roomOverviewPage}>
-                            <p className="overlay-text">kitchen</p>
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
         </div>
     );

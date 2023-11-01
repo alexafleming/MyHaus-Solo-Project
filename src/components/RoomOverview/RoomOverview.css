@@ -5,6 +5,7 @@
 }
 
 .notepad {
+    padding: 19px;
     background-color: #f6f0e8;
     border: none;
     width: 300px;
@@ -15,7 +16,7 @@
 
 .image-overview {
     width: 300px;
-    height: 300px;
+    height: 350px;
     position: relative;
     border-radius: 10px;
     background-size: cover;
@@ -61,4 +62,8 @@ background-color: #b5b0a0 !important;;
 
 .accordion-button:not(.collapsed){
     color: black !important;
+}
+
+.pricebold{
+    font-weight: 700;
 }
