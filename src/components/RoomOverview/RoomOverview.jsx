@@ -22,9 +22,14 @@ function RoomOverview() {
 
 
     useEffect(() => {
+        if (roomsList.length > 0) {
+            getRoomById();
+        }
+    }, [roomsList]);
+
+    useEffect(() => {
         dispatch({ type: 'FETCH_ROOM_LIST' })
         dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
-        getRoomById();
     }, []);
 
     const newForm = (path) => {
@@ -193,36 +198,36 @@ function RoomOverview() {
                                         </button>
                                     </h2>
                                     {
-                                            formsList.miscForm.map(form => (
-                                                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
+                                        formsList.miscForm.map(form => (
+                                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
 
-                                                        <div class="row">
+                                                    <div class="row">
 
-                                                            <div class="col-md-2">
-                                                                <p>{form.brand_name}</p>
+                                                        <div class="col-md-2">
+                                                            <p>{form.brand_name}</p>
 
-                                                            </div>
+                                                        </div>
 
-                                                            <div class="col-md-2">
-                                                                <p>{form.item}</p>
-                                                            </div>
-
-
-                                                            <div class="col-md-7">
-                                                                <p>{form.additional_comments}</p>
-                                                            </div>
-
-                                                            <div class="col-md-1">
-                                                                <button>delete</button> <button>edit</button>
-                                                            </div>
+                                                        <div class="col-md-2">
+                                                            <p>{form.item}</p>
                                                         </div>
 
 
+                                                        <div class="col-md-7">
+                                                            <p>{form.additional_comments}</p>
+                                                        </div>
+
+                                                        <div class="col-md-1">
+                                                            <button>delete</button> <button>edit</button>
+                                                        </div>
                                                     </div>
+
+
                                                 </div>
-                                            ))
-                                        }
+                                            </div>
+                                        ))
+                                    }
 
                                 </div>
                             </div>
@@ -233,7 +238,7 @@ function RoomOverview() {
                             <div class="col-md-4" >
                                 <div className="notes-title">Notes</div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="10" className="notepad"></textarea>
+                                    <textarea class="form-control" rows="10" value={roomOverview.notes} className="notepad"></textarea>
                                 </div>
                             </div>
                         </div>

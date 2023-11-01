@@ -8,11 +8,11 @@ function createRoom() {
     const history = useHistory();
     const dispatch = useDispatch();
     const [roomName, setRoomName] = useState('');
-    const [roomPhoto, setRoomPhoto] = useState();
+    const [roomPhoto, setRoomPhoto] = useState(null);
 
     const addRoom = (e) => {
         e.preventDefault();
-        dispatch({ type: 'ADD_ROOM', payload: { roomName: roomName , image: roomPhoto }});
+        dispatch({ type: 'ADD_ROOM', payload: { roomName: roomName, image: roomPhoto } });
         history.push('/room-profiles')
     }
 
@@ -25,6 +25,7 @@ function createRoom() {
 
         // Check if the file is one of the allowed types.
         if (acceptedImageTypes.includes(fileToUpload.type)) {
+            console.log(fileToUpload);
             setRoomPhoto(fileToUpload);
         } else {
             alert('Please select an image');
@@ -37,23 +38,34 @@ function createRoom() {
             <div class="container d-flex justify-content-center align-items-center vh-100">
                 <div class="card">
                     <div class="card-body">
-                        <form class="create-room"  onSubmit={addRoom}>
+                        <form class="create-room" onSubmit={addRoom}>
                             <p class="create-room-title">CREATE NEW ROOM</p>
 
 
-                            <div class="create-room-style additional-comments-margin">
 
-                            </div>
                             <div class='row'>
                                 <div class="col-md-12 d-flex justify-content-center">
                                     <input
+                                        class="form-control"
                                         type="file"
                                         accept="image/*"
                                         onChange={onFileChange}
                                     />
-                                    <button type="submit" class="btn upload-btn-style">upload</button>
+
                                 </div>
                             </div>
+
+                            {roomPhoto && (
+                                 <div className="imageFormat d-flex justify-content-center align-items-center">
+                                    
+                                    <img
+                                    className="image-overview"
+                                    src={URL.createObjectURL(roomPhoto)}
+                                    alt="Room Preview"
+                                />
+                                
+                                </div>
+                            )}
 
                             <div class="create-room-style">
                                 <input type="text" class="create-room-input-style" id="brandName" autoComplete='off' placeholder="*room name" required value={roomName} onChange={e => setRoomName(e.target.value)} />
