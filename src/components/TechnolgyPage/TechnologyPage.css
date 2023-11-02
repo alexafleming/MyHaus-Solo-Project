@@ -1,0 +1,34 @@
+.tech-background{
+    background: url('https://studio-mcgee.com/app/uploads/2021/08/studiomcgee_WinterCatalogue_079_web-scaled.jpeg') rgba(0, 0, 0, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.tech-text-box{
+    width: 400px; 
+    height: 350px;
+    background-color: #b5b0a0; 
+    border-radius: 10px; 
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .tech-text{
+    text-align: center;
+  }
+
+  .tech-text-bold{
+    font-weight:600
+  }
+
+  .tech-list{
+    padding-top: 10px;
+  }

@@ -17,11 +17,11 @@ function Footer() {
         <Link className="footer-link px-2 text-white" to="/about">
           ABOUT
         </Link>
+        <Link className="footer-link px-2 text-white" to="/techonoly-page">
+          TECHNOLOGIES
+        </Link>
         <Link className="footer-link px-2 text-white" to="/room-profiles">
           ROOM PROFILES
-        </Link>
-      <Link className="footer-link px-2 text-white" to="/create-room">
-          CREATE ROOM
         </Link>
         </ul>
         <hr className="my-1" />
