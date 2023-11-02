@@ -47,6 +47,35 @@ function RoomOverview() {
             });
     }
 
+    const deleteDecorForm = (formId) => {
+        axios.delete(`/api/forms/decorform/${formId}`)
+            .then((response) => {
+                dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    const deleteAppForm = (formId) => {
+        axios.delete(`/api/forms/appform/${formId}`)
+            .then((response) => {
+                dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    const deleteMiscForm = (formId) => {
+        axios.delete(`/api/forms/miscform/${formId}`)
+            .then((response) => {
+                dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
 
     return (
@@ -105,7 +134,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <i class="bi bi-pencil  me-2"></i>
-                                                                <i class="bi bi-trash3" onClick={() => deletePaintForm(form.id)} ></i>
+                                                                <i class="bi bi-trash3" onClick={() => deletePaintForm(form.id)}></i>
                                                             </div>
                                                         </div>
                                                     ))
@@ -141,7 +170,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <i class="bi bi-pencil  me-2"></i>
-                                                                <i class="bi bi-trash3"></i>
+                                                                <i class="bi bi-trash3" onClick={() => deleteDecorForm(form.id)}></i>
                                                             </div>
                                                         </div>
                                                     ))
@@ -181,7 +210,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <i class="bi bi-pencil  me-2"></i>
-                                                                <i class="bi bi-trash3"></i>
+                                                                <i class="bi bi-trash3" onClick={() => deleteAppForm(form.id)}></i>
                                                             </div>
                                                         </div>
                                                     ))
@@ -217,7 +246,7 @@ function RoomOverview() {
                                                         </div>
                                                         <div class="col-md-1">
                                                             <i class="bi bi-pencil  me-2"></i>
-                                                            <i class="bi bi-trash3"></i>
+                                                            <i class="bi bi-trash3" onClick={() => deleteMiscForm(form.id)}></i>
                                                         </div>
                                                     </div>
                                                 ))
