@@ -119,5 +119,72 @@ router.post('/miscform', (req, res) => {
         });
 });
 
+router.delete('/paintform/:id', (req, res) => {
+  
+  const queryText = `DELETE FROM "paint_form" WHERE "id" = $1;`;
+
+  const values = [req.params.id];
+
+  pool.query(queryText, values)
+  .then((result) => {
+    console.log(`Succesfully deleted paint form`);
+    res.sendStatus(201);
+  })
+  .catch((error) => {
+    console.log(error);
+    res.sendStatus('Error deleting stat', 500);
+  })
+});
+
+router.delete('/decorform/:id', (req, res) => {
+  
+  const queryText = `DELETE FROM "decor_form" WHERE "id" = $1;`;
+
+  const values = [req.params.id];
+
+  pool.query(queryText, values)
+  .then((result) => {
+    console.log(`Succesfully deleted decor form`);
+    res.sendStatus(201);
+  })
+  .catch((error) => {
+    console.log(error);
+    res.sendStatus('Error deleting stat', 500);
+  })
+});
+
+router.delete('/appform/:id', (req, res) => {
+  
+  const queryText = `DELETE FROM "appliances_electronics_form" WHERE "id" = $1;`;
+
+  const values = [req.params.id];
+
+  pool.query(queryText, values)
+  .then((result) => {
+    console.log(`Succesfully deleted appliances and electroncs form`);
+    res.sendStatus(201);
+  })
+  .catch((error) => {
+    console.log(error);
+    res.sendStatus('Error deleting stat', 500);
+  })
+});
+
+router.delete('/miscform/:id', (req, res) => {
+  
+  const queryText = `DELETE FROM "miscellaneous_form" WHERE "id" = $1;`;
+
+  const values = [req.params.id];
+
+  pool.query(queryText, values)
+  .then((result) => {
+    console.log(`Succesfully miscellaneous form`);
+    res.sendStatus(201);
+  })
+  .catch((error) => {
+    console.log(error);
+    res.sendStatus('Error deleting stat', 500);
+  })
+});
 
 module.exports = router;

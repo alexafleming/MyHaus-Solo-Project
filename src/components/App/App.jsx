@@ -15,7 +15,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import InfoPage from '../TechnolgyPage/TechnolgyPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -26,6 +26,7 @@ import AppliancesElectronicsForm from '../Forms/AppliancesElectronicsForm/Applia
 import DecorForm from '../Forms/DecorForm/DecorForm';
 import MiscellaneousForm from '../Forms/MiscellaneousForm/MiscellaneousForm';
 import PaintColorForm from '../Forms/PaintColorForm/PaintColorForm';
+import TechnolgyPage from '../TechnolgyPage/TechnolgyPage';
 
 // import bootstrap 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -158,6 +159,13 @@ function App() {
             exact
             path="/paint-form/:id">
             <PaintColorForm />
+          </Route>
+
+          <Route
+            exact
+            path="/techonoly-page"
+          >
+            <TechnolgyPage />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
