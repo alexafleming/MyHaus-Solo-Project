@@ -39,7 +39,7 @@ function DecorForm(param) {
                 <div class="card">
                     <div class="card-body">
                         <form onSubmit={handleSubmit}>
-                            <p class="decor-form-title">DECORS</p>
+                            <p class="decor-form-title">DECOR</p>
                             <div class="decor-form-style">
                                 <input type="text" class="form-input-style" id="item" placeholder="*item" autoComplete='off' required onChange={(event) => setItem(event.target.value)} />
                             </div>

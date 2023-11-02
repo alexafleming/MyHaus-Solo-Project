@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './RoomOverview.css'
+import axios from 'axios';
 
 function RoomOverview() {
     const history = useHistory();
@@ -34,7 +35,17 @@ function RoomOverview() {
 
     const newForm = (path) => {
         history.push(path + `/${id}`);
-    };
+    }
+
+    const deletePaintForm = (formId) => {
+        axios.delete(`/api/forms/paintform/${formId}`)
+            .then((response) => {
+                dispatch({ type: 'FETCH_FORMS_DETAILS', payload: id })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
 
 
@@ -94,7 +105,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-1">
                                                                 <i class="bi bi-pencil  me-2"></i>
-                                                                <i class="bi bi-trash3"></i>
+                                                                <i class="bi bi-trash3" onClick={() => deletePaintForm(form.id)} ></i>
                                                             </div>
                                                         </div>
                                                     ))
