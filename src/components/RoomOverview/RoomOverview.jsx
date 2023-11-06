@@ -92,6 +92,10 @@ function RoomOverview() {
         editForm("/app-elec-form", formId);
     }
 
+    const editMiscForm = (formId) => {
+        editForm("/misc-form", formId);
+    }
+
     return (
         <div class="container-fluid room-overview-container">
             <div >
@@ -259,7 +263,7 @@ function RoomOverview() {
                                                             <p>{form.additional_comments}</p>
                                                         </div>
                                                         <div class="col-md-1">
-                                                            <i class="bi bi-pencil  me-2"></i>
+                                                            <i class="bi bi-pencil  me-2" onClick={() => editMiscForm(form.id)}></i>
                                                             <i class="bi bi-trash3" onClick={() => deleteMiscForm(form.id)}></i>
                                                         </div>
                                                     </div>

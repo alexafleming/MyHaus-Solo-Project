@@ -251,4 +251,24 @@ router.put('/appform/:id', (req, res) => {
     });
 });
 
+router.put('/miscform/:id', (req, res) => {
+  let { id } = req.params;
+  const updateValues = [req.body.item, req.body.brandName, req.body.additionalComments, id];
+
+  const queryText = `
+  UPDATE "miscellaneous_form"
+  SET "item" = $1, "brand_name" = $2, "additional_comments" = $3
+  WHERE "id" = $4`
+
+  pool.query(queryText, updateValues)
+    .then((result) => {
+      console.log(`Successfully updated miscellaneous form with ID ${id}`);
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('Error updating miscellaneous form');
+    });
+});
+
 module.exports = router;
