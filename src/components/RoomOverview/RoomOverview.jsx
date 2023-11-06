@@ -21,7 +21,6 @@ function RoomOverview() {
         }
     }
 
-
     useEffect(() => {
         if (roomsList.length > 0) {
             getRoomById();
@@ -35,6 +34,10 @@ function RoomOverview() {
 
     const newForm = (path) => {
         history.push(path + `/${id}`);
+    }
+
+    const editForm = (path, formId) => {
+        history.push(path + `/${id}/${formId}`);
     }
 
     const deletePaintForm = (formId) => {
@@ -77,6 +80,21 @@ function RoomOverview() {
             });
     }
 
+    const editPaintForm = (formId) => {
+        editForm("/paint-form", formId);
+    }
+
+    const editDecorForm = (formId) => {
+        editForm("/decor-form", formId);
+    }
+
+    const editAppForm = (formId) => {
+        editForm("/app-elec-form", formId);
+    }
+
+    const editMiscForm = (formId) => {
+        editForm("/misc-form", formId);
+    }
 
     return (
         <div class="container-fluid room-overview-container">
@@ -126,14 +144,14 @@ function RoomOverview() {
                                                             <div class="col-md-2">
                                                                 <p>{form.paint_color_name}</p>
                                                             </div>
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-2">
                                                                 <p>{form.paint_finish}</p>
                                                             </div>
-                                                            <div class="col-md-5">
+                                                            <div class="col-md-4">
                                                                 <p>{form.additional_comments}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editPaintForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deletePaintForm(form.id)}></i>
                                                             </div>
                                                         </div>
@@ -169,7 +187,7 @@ function RoomOverview() {
                                                                 <a href={form.website_link} target="_blank"> Website Link</a>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editDecorForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deleteDecorForm(form.id)}></i>
                                                             </div>
                                                         </div>
@@ -197,7 +215,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <p>{form.model_number}</p>
-                                                                <p>{form.warrenty_info}</p>
+                                                                <p>{form.warranty_info}</p>
 
                                                             </div>
 
@@ -209,7 +227,7 @@ function RoomOverview() {
                                                                 <p>${form.price_of_item}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editAppForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deleteAppForm(form.id)}></i>
                                                             </div>
                                                         </div>
@@ -245,7 +263,7 @@ function RoomOverview() {
                                                             <p>{form.additional_comments}</p>
                                                         </div>
                                                         <div class="col-md-1">
-                                                            <i class="bi bi-pencil  me-2"></i>
+                                                            <i class="bi bi-pencil  me-2" onClick={() => editMiscForm(form.id)}></i>
                                                             <i class="bi bi-trash3" onClick={() => deleteMiscForm(form.id)}></i>
                                                         </div>
                                                     </div>

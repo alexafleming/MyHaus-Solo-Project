@@ -48,10 +48,10 @@ CREATE TABLE "decor_form" (
 CREATE TABLE "appliances_electronics_form" (
     "id" SERIAL PRIMARY KEY,
     "item" VARCHAR (100) NOT NULL,
-    "price_of_item" numeric(10, 2) NOT NULL,
     "brand_name" VARCHAR (150) NOT NULL,
+    "price_of_item" numeric(10, 2) NOT NULL,
     "model_number" VARCHAR NULL,
-    "warrenty_info" VARCHAR NULL,
+    "warranty_info" VARCHAR NULL,
     "additional_comments" VARCHAR (1000) NULL,
     "room_id" INTEGER REFERENCES rooms
 );

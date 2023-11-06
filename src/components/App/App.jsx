@@ -139,14 +139,24 @@ function App() {
             exact
             path="/app-elec-form/:id">
             <AppliancesElectronicsForm />
+          </Route>
 
+          <Route
+            exact
+            path="/app-elec-form/:id/:formId">
+            <AppliancesElectronicsForm />
           </Route>
 
           <Route
             exact
             path="/decor-form/:id">
             <DecorForm />
+          </Route>
 
+          <Route
+            exact
+            path="/decor-form/:id/:formId">
+            <DecorForm />
           </Route>
 
           <Route
@@ -157,7 +167,19 @@ function App() {
 
           <Route
             exact
+            path="/misc-form/:id/:formId">
+            <MiscellaneousForm />
+          </Route>
+
+          <Route
+            exact
             path="/paint-form/:id">
+            <PaintColorForm />
+          </Route>
+
+          <Route
+            exact
+            path="/paint-form/:id/:formId">
             <PaintColorForm />
           </Route>
 
