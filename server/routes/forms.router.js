@@ -193,7 +193,8 @@ router.put('/paintform/:id', (req, res) => {
 
   const queryText = `
   UPDATE "paint_form"
-  SET "brand_name" = $1, "paint_color_name" = $2, "paint_finish" = $3, "additional_comments" = $4
+  SET "brand_name" = $1, "paint_color_name" = $2, 
+ "paint_finish" = $3, "additional_comments" = $4
   WHERE "id" = $5`
 
   pool.query(queryText, updateValues)
@@ -204,6 +205,27 @@ router.put('/paintform/:id', (req, res) => {
     .catch((error) => {
       console.error(error);
       res.status(500).send('Error updating paint form');
+    });
+});
+
+router.put('/decorform/:id', (req, res) => {
+  let { id } = req.params;
+  const updateValues = [ req.body.item, req.body.purchasedFrom, req.body.websiteLink, req.body.additionalComments, id];
+
+  const queryText = `
+  UPDATE "decor_form"
+  SET "item" = $1, "purchased_from" = $2, 
+ "website_link" = $3, "additional_comments" = $4
+  WHERE "id" = $5`
+
+  pool.query(queryText, updateValues)
+    .then((result) => {
+      console.log(`Successfully updated decor form with ID ${id}`);
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('Error updating decor form');
     });
 });
 

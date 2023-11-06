@@ -146,7 +146,12 @@ function App() {
             exact
             path="/decor-form/:id">
             <DecorForm />
+          </Route>
 
+          <Route
+            exact
+            path="/decor-form/:id/:formId">
+            <DecorForm />
           </Route>
 
           <Route

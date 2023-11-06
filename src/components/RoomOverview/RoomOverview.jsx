@@ -84,6 +84,10 @@ function RoomOverview() {
         editForm("/paint-form", formId);
     }
 
+    const editDecorForm = (formId) => {
+        editForm("/decor-form", formId);
+    }
+
 
     return (
         <div class="container-fluid room-overview-container">
@@ -133,10 +137,10 @@ function RoomOverview() {
                                                             <div class="col-md-2">
                                                                 <p>{form.paint_color_name}</p>
                                                             </div>
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-2">
                                                                 <p>{form.paint_finish}</p>
                                                             </div>
-                                                            <div class="col-md-5">
+                                                            <div class="col-md-4">
                                                                 <p>{form.additional_comments}</p>
                                                             </div>
                                                             <div class="col-md-1">
@@ -176,7 +180,7 @@ function RoomOverview() {
                                                                 <a href={form.website_link} target="_blank"> Website Link</a>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editDecorForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deleteDecorForm(form.id)}></i>
                                                             </div>
                                                         </div>

@@ -64,7 +64,7 @@ function PaintColorForm() {
                 })
                 .catch(error => {
                     console.log(error);
-                    alert('Sorry, could not add paint form');
+                    alert('Sorry, could not update paint form');
                 });
         }
     };
