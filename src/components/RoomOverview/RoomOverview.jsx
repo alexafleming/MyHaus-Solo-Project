@@ -21,7 +21,6 @@ function RoomOverview() {
         }
     }
 
-
     useEffect(() => {
         if (roomsList.length > 0) {
             getRoomById();
@@ -35,6 +34,10 @@ function RoomOverview() {
 
     const newForm = (path) => {
         history.push(path + `/${id}`);
+    }
+
+    const editForm = (path, formId) => {
+        history.push(path + `/${id}/${formId}`);
     }
 
     const deletePaintForm = (formId) => {
@@ -75,6 +78,10 @@ function RoomOverview() {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    const editPaintForm = (formId) => {
+        editForm("/paint-form", formId);
     }
 
 
@@ -133,7 +140,7 @@ function RoomOverview() {
                                                                 <p>{form.additional_comments}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editPaintForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deletePaintForm(form.id)}></i>
                                                             </div>
                                                         </div>

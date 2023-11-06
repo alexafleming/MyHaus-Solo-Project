@@ -163,6 +163,12 @@ function App() {
 
           <Route
             exact
+            path="/paint-form/:id/:formId">
+            <PaintColorForm />
+          </Route>
+
+          <Route
+            exact
             path="/techonoly-page"
           >
             <TechnolgyPage />
