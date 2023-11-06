@@ -139,7 +139,12 @@ function App() {
             exact
             path="/app-elec-form/:id">
             <AppliancesElectronicsForm />
+          </Route>
 
+          <Route
+            exact
+            path="/app-elec-form/:id/:formId">
+            <AppliancesElectronicsForm />
           </Route>
 
           <Route

@@ -88,6 +88,9 @@ function RoomOverview() {
         editForm("/decor-form", formId);
     }
 
+    const editAppForm = (formId) => {
+        editForm("/app-elec-form", formId);
+    }
 
     return (
         <div class="container-fluid room-overview-container">
@@ -208,7 +211,7 @@ function RoomOverview() {
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <p>{form.model_number}</p>
-                                                                <p>{form.warrenty_info}</p>
+                                                                <p>{form.warranty_info}</p>
 
                                                             </div>
 
@@ -220,7 +223,7 @@ function RoomOverview() {
                                                                 <p>${form.price_of_item}</p>
                                                             </div>
                                                             <div class="col-md-1">
-                                                                <i class="bi bi-pencil  me-2"></i>
+                                                                <i class="bi bi-pencil  me-2" onClick={() => editAppForm(form.id)}></i>
                                                                 <i class="bi bi-trash3" onClick={() => deleteAppForm(form.id)}></i>
                                                             </div>
                                                         </div>
