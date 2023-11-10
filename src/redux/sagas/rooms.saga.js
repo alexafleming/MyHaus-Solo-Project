@@ -13,10 +13,15 @@ function* getRoomList() {
 }
 function* addRoom(action){
     try {
+        const cloudName = process.env.REACT_APP_CLOUD_NAME;
+        const cloudPreset = process.env.REACT_APP_PRESET;
+
+        console.log("Cloud Name", cloudName);
+        console.log("Cloud Preset", cloudPreset);
         const formData = new FormData();
         formData.append('file', action.payload.image);
-        formData.append('upload_preset', process.env.REACT_APP_PRESET);
-        let postUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+        formData.append('upload_preset', cloudPreset);
+        let postUrl = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
         const response = yield axios.post(postUrl, formData);
         yield axios.post('/api/rooms', { ...action.payload, photo: response.data.secure_url});
         yield put({ type: 'FETCH_ROOM_LIST' });
