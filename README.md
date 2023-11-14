@@ -31,7 +31,8 @@ your home projects. With MyHaus, your home is not just a place; it's a well-mana
 ---
 
 # Built with
-<p>
-JavaScript · React · Redux · Redux-Saga · Node.js · Express · PostgreSQL · Bootstrap · Cloudinary
-<p />
+
+![technologies header](https://github.com/alexafleming/MyHaus-Solo-Project/assets/111538729/6bbabbd7-be11-4231-a630-fcd9037c538b)
+
+
 
