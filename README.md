@@ -9,7 +9,7 @@ application. MyHaus is designed to help you effortlessly organize, document, and
 your home projects. With MyHaus, your home is not just a place; it's a well-managed sanctuary.
     <br />
     <br />
-<a href="https://git.heroku.com/myhaus.git"><strong>JOIN MYHAUS »</strong></a>
+<a href="https://myhaus-9678240f0f0e.herokuapp.com/#/home"><strong>JOIN MYHAUS »</strong></a>
     <br />
     <br />
     <a href="https://docs.google.com/document/d/1ONGA14aSjbAh9HsI58p4CcUwApR4yN9Ey8M65rSrMEo/edit?usp=sharing">View Application Overview</a>
@@ -27,5 +27,22 @@ your home projects. With MyHaus, your home is not just a place; it's a well-mana
 - Run `npm install` from the project root directory
 - Run `npm run server` to run the node server
 - In a separate terminal tab, run `npm run client` to launch the React app
+
+---
+
+# Built with
+
+JavaScript <br />
+React <br />
+Redux <br />
+Redux-Saga <br />
+Node.js <br />
+Express <br />
+PostgreSQL <br />
+[Material UI](https://mui.com/) <br />
+[Garamond Font](https://www.npmjs.com/package/@fontsource/eb-garamond) <br />
+[TheCocktailDB API](https://www.thecocktaildb.com/) <br />
+[Postico](https://eggerapps.at/postico/) <br />
+[Visual Studio Code](https://code.visualstudio.com/) <br />
 
 ---
