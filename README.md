@@ -40,6 +40,8 @@ Wireframing played a crucial role in the design of MyHaus, providing a structure
 ---
 # Application Use 
 
+![myhaus gif](https://github.com/alexafleming/MyHaus-Solo-Project/assets/111538729/741f2546-e94d-426a-8fbd-b76bccbaa795)
+
 - Welcome to MyHaus!
 - Users can either LOGIN or REGISTER in the upper right-hand corner.
 - Upon successful login, users will be directed to the ROOM PROFILES page.
