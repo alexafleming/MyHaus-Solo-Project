@@ -9,12 +9,12 @@ application. MyHaus is designed to help you effortlessly organize, document, and
 your home projects. With MyHaus, your home is not just a place; it's a well-managed sanctuary.
     <br />
     <br />
-<a href="https://myhaus-9678240f0f0e.herokuapp.com/#/home"><strong>JOIN MYHAUS »</strong></a>
+<a href="https://myhaus-9678240f0f0e.herokuapp.com/#/home" target="_blank"><strong>JOIN MYHAUS »</strong></a>
     <br />
     <br />
-    <a href="https://docs.google.com/document/d/1ONGA14aSjbAh9HsI58p4CcUwApR4yN9Ey8M65rSrMEo/edit?usp=sharing">View Application Overview</a>
+    <a href="https://docs.google.com/document/d/1ONGA14aSjbAh9HsI58p4CcUwApR4yN9Ey8M65rSrMEo/edit?usp=sharing" target="_blank">View Application Overview</a>
     ·
-     <a href="https://www.linkedin.com/in/alexaflemingmn">LinkedIn</a>
+     <a href="https://www.linkedin.com/in/alexaflemingmn" target="_blank">LinkedIn</a>
     
 ---
 # Design
@@ -38,11 +38,10 @@ Wireframing played a crucial role in the design of MyHaus, providing a structure
 ![technologies header](https://github.com/alexafleming/MyHaus-Solo-Project/assets/111538729/6bbabbd7-be11-4231-a630-fcd9037c538b)
 
 ---
-# Application Use 
 
 ![myhaus gif](https://github.com/alexafleming/MyHaus-Solo-Project/assets/111538729/741f2546-e94d-426a-8fbd-b76bccbaa795)
 
-- Welcome to MyHaus!
+# Application Use
 - Users can either LOGIN or REGISTER in the upper right-hand corner.
 - Upon successful login, users will be directed to the ROOM PROFILES page.
 - The ROOM PROFILES page displays all rooms created by the user for their house.
