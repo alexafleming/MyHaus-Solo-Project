@@ -14,11 +14,19 @@ your home projects. With MyHaus, your home is not just a place; it's a well-mana
     <br />
     <a href="https://docs.google.com/document/d/1ONGA14aSjbAh9HsI58p4CcUwApR4yN9Ey8M65rSrMEo/edit?usp=sharing">View Application Overview</a>
     ·
-    <a href="https://www.linkedin.com/in/alexaflemingmn">LinkedIn</a>
-  </p>
-</div>
+     <a href="https://www.linkedin.com/in/alexaflemingmn">LinkedIn</a>
+    
 
 ---
+# Design
+
+Wireframing played a crucial role in the design of MyHaus, providing a structured method for envisioning the project's interface and user experience. It empowered me to sketch and imagine design elements, ensuring a user-friendly and visually appealing digital platform.
+
+![Solo Porject Wireframe](https://github.com/alexafleming/MyHaus-Solo-Project/assets/111538729/6216f467-9604-4818-805c-0c195f64152f)
+
+
+
+--- 
 
 # Setup and Installation
 
